@@ -6,7 +6,7 @@
 - 🤖 Currently working on a Discord Bot project named "Historia". Take a look at my repository and stay tuned for updates!
 
 <p align="center">
-  <img src="https://cdn.discordapp.com/avatars/877008612021661726/f7766a8ef60ec4c826a3025537a136ee.png?size=256">
+  <img src="https://media.discordapp.net/attachments/878915633448894525/889071088347250728/20210919_165026.jpg">
 </p>
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=CyroN Commander&message=Schryzon&color=blue&style=for-the-badge">
