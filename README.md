@@ -1,6 +1,6 @@
-- 👋 Hello there, I’m Schryzon.
+- 👋 Hello there, I’m Schryzon, you can also call me Fenrir.
 - 🌐 Commander of the CyroN group.
-- 👀 I’m interested in developing stuff (well yeah)
+- 💭 I’m interested in developing stuff (well yeah obviously)
 - 🌱 I’m currently learning discord.py, HTML, and C++
 - 📫 Feel free to contact me on Discord: Fenrir#4302
 - 🤖 Currently working on a Discord Bot project named "Historia". Take a look at my repository and stay tuned for updates!
