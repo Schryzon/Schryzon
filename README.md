@@ -11,7 +11,7 @@
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=CyroN Commander&message=Schryzon&color=blue&style=for-the-badge">
   <a href="https://discord.gg/QqWCnk6zxw">
-    <img src="https://img.shields.io/static/v1?label=CyroN Central&message=Discord&color=blue&style=for-the-badge&logo=discord">
+    <img src="https://img.shields.io/static/v1?label=Join CyroN&message=Discord&color=blue&style=for-the-badge&logo=discord">
 </p>
 <!---
 Schryzon/Schryzon is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
