@@ -28,7 +28,7 @@
   <a href="https://discord.gg/QqWCnk6zxw">
     <img src="https://img.shields.io/static/v1?label=Join CyroN&message=Discord&color=blue&style=for-the-badge&logo=discord">
 </p>
-<p align="center>Just a normal person.</p>
+<p align="center">꧁Ieͣnͫgineer༒꧂</p>
 <!---
 zd
 --->
