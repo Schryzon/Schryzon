@@ -1,5 +1,5 @@
 # 💫 Jay (Schryzon)
-I'm a passionate backend and machine learning enthusiast currently studying at Universitas Mataram, Indonesia. 
+I'm a passionate backend and AI engineering enthusiast currently studying at Universitas Mataram, Indonesia. 
 
 I spend most of my time crafting asynchronous systems, exploring AI capabilities, and building automated systems.
 
