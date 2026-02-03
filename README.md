@@ -61,7 +61,7 @@ That means I've been in IT since I was 13, hehe... how time flies.
 
 <p align="center">
   <a href="https://git.io/streak-stats">
-    <img src="https://streak-stats.demolab.com/?user=Schryzon&theme=midnight-purple" alt="GitHub Streak" />
+    <img src="./profile/streak.svg" alt="GitHub Streak" />
   </a>
 </p>
 
