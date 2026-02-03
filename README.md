@@ -59,11 +59,12 @@ That means I've been in IT since I was 13, hehe... how time flies.
   <img src="./profile/stats.svg" alt="Stats" />
 </p>
 
-<p align="center">
-  <a href="https://git.io/streak-stats">
-    <img src="./profile/streak.svg" alt="GitHub Streak" />
-  </a>
-</p>
+<div style="display: flex; justify-content: center; align-items: center;">
+    <img
+          alt="github-streak-stats"
+          src="./profile/streak.svg"
+        />
+</div>
 
 <p align="center">
   <img src="./profile/top-langs.svg" alt="Top Languages" />

@@ -45,8 +45,6 @@ jobs:
           USERNAME: ${{ github.repository_owner }}
           THEME: midnight-purple
           OUTPUT_PATH: profile/streak.svg
-          CARD_WIDTH: 297
-          CARD_HEIGHT: 117
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
