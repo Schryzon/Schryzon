@@ -1,22 +1,14 @@
 # 💫 Jay (Schryzon)
-I'm a passionate backend and AI engineering enthusiast currently studying at Universitas Mataram, Indonesia. 
+I'm a passionate Cloud, DevOps, and Backend engineering enthusiast currently studying at **Universitas Mataram**, Indonesia. 
 
-I spend most of my time crafting asynchronous systems, exploring AI capabilities, and building automated systems.
+Currently have over **5 years of experience** (professional & non-professional combined) in Information Technology.
+
+That means I've been in IT since I was 13, hehe... how time flies.
 
 ```python
-"Nep, nep, nep, love Python."
- - Schryzon, 2025
+"Meow, love Networking."
+ - Schryzon, 2026
 ```
-
-## 🌐 Socials:
-<p align="left">
-  <a href="https://linkedin.com/in/schryzon">
-    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
-  <a href="https://youtube.com/@schryzon">
-    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?logo=YouTube&logoColor=white" alt="YouTube"/>
-  </a>
-</p>
 
 # 💻 Tech Stack:
 <p align="center">
@@ -35,27 +27,24 @@ I spend most of my time crafting asynchronous systems, exploring AI capabilities
 </p>
 
 # 📊 GitHub Stats:
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Schryzon&theme=dark&hide_border=false&include_all_commits=false&count_private=false" alt="GitHub Stats"/>
-  <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Schryzon&theme=dark&hide_border=false" alt="GitHub Streak"/>
-  <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Schryzon&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact" alt="Top Languages"/>
-</p>
+![Stats](./profile/stats.svg)
+[![GitHub Streak](https://streak-stats.demolab.com/?user=Schryzon&theme=dark)](https://git.io/streak-stats)
+![Top Languages](./profile/top-langs.svg)
 
 ## 🏆 GitHub Trophies
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Schryzon&theme=midnight-purple&no-frame=false&no-bg=false&margin-w=4" alt="GitHub Trophies"/>
-</p>
+![Top Languages](./profile/trophy.svg)
 
 ### 🔝 Top Contributed Repo
 <p align="center">
   <img src="https://github-contributor-stats.vercel.app/api?username=Schryzon&limit=5&theme=midnight-purple&combine_all_yearly_contributions=true" alt="Top Contributed Repo"/>
 </p>
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
-
 <p align="center">꧁Ieͣnͫgineer༒꧂</p>
+
 <!---
+What could "Schryzon" mean?
+I don't know...
+but it certainly sounds cool,
+and unique!
 zd
 --->
