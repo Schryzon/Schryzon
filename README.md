@@ -62,7 +62,8 @@ That means I've been in IT since I was 13, hehe... how time flies.
 <div align="center">
     <img
           alt="github-streak-stats"
-          width="260"
+          width="495"
+          height="195"
           src="./profile/streak.svg"
         />
 </div>
