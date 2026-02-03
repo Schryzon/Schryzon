@@ -39,6 +39,14 @@ jobs:
           path: profile/pin-readme-tools-github-readme-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: GitHub Streak Card Generator
+        uses: muhammad-fiaz/github-readme-streak-stats@v1.0.1
+        with:
+          card: streak
+          options: user=${{ github.repository_owner }}&theme=midnight-purple
+          path: profile/streak.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Commit cards
         run: |
           git config user.name "github-actions[bot]"
