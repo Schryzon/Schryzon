@@ -42,10 +42,10 @@ jobs:
       - name: GitHub Streak Card Generator
         uses: muhammad-fiaz/github-readme-streak-stats@v1.0.1
         with:
-          card: streak
-          options: user=${{ github.repository_owner }}&theme=midnight-purple
-          path: profile/streak.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          THEME: midnight-purple
+          OUTPUT_PATH: profile/streak.svg
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
         run: |
