@@ -59,9 +59,10 @@ That means I've been in IT since I was 13, hehe... how time flies.
   <img src="./profile/stats.svg" alt="Stats" />
 </p>
 
-<div style="display: flex; justify-content: center; align-items: center;">
+<div align="center">
     <img
           alt="github-streak-stats"
+          width="260"
           src="./profile/streak.svg"
         />
 </div>
