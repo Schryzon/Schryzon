@@ -1,5 +1,5 @@
 # 💫 Jay (Schryzon)
-I'm a passionate Cloud, DevOps, and Backend engineering enthusiast currently studying at **Universitas Mataram**, Indonesia. 
+I'm a passionate Cloud, DevOps, and Backend enthusiast currently studying at **Universitas Mataram**, Indonesia. 
 
 Currently have over **5 years of experience** (professional & non-professional combined) in Information Technology.
 
@@ -71,7 +71,7 @@ That means I've been in IT since I was 13, hehe... how time flies.
 
 ## 🏆 GitHub Trophies
 <p align="center">
-  <img src="https://github-profile-trophy-tawny.vercel.app/?username=Schryzon&theme=aura" alt="GitHub Trophies"/>
+  <img src="https://schryzon-github-profile-trophy.vercel.app/?username=Schryzon&theme=aura" alt="GitHub Trophies"/>
 </p>
 
 ### 🔝 Top Contributed Repo
