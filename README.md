@@ -71,12 +71,12 @@ That means I've been in IT since I was 13, hehe... how time flies.
 
 ## 🏆 GitHub Trophies
 <p align="center">
-  <img src="https://schryzon-github-profile-trophy.vercel.app/?username=Schryzon&theme=aura" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy-tawny.vercel.app/?username=Schryzon&theme=aura" alt="GitHub Trophies"/>
 </p>
 
 ### 🔝 Top Contributed Repo
 <p align="center">
-  <img src="https://github-contributor-stats.vercel.app/api?username=Schryzon&limit=10&theme=midnight-purple&combine_all_yearly_contributions=false" alt="Top Contributed Repo"/>
+  <img src="https://github-contributor-stats.vercel.app/api?username=Schryzon&limit=10&theme=midnight-purple&combine_all_yearly_contributions=true" alt="Top Contributed Repo"/>
 </p>
 
 <p align="center">꧁Ieͣnͫgineer༒꧂</p>
