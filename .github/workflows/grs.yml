@@ -19,7 +19,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true
+          options: username=${{ github.repository_owner }}&show_icons=true&theme=dark
           path: profile/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -27,7 +27,7 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&theme=dark
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -37,13 +37,6 @@ jobs:
           card: pin
           options: username=readme-tools&repo=github-readme-stats
           path: profile/pin-readme-tools-github-readme-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Generate trophy
-        uses: Erik-Donath/github-profile-trophy@feature/generate-svg
-        with:
-          username: Schryzon
-          path: profile/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cards
