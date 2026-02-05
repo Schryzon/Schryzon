@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">I Nyoman Widiyasa Jayananda's GitHub Stats, Rank: B-</title>
-        <desc id="descId">Total Stars Earned: 40, Total Commits  (last year) : 109, Total PRs: 6, Total Issues: 0, Contributed to (last year): 2</desc>
+        <desc id="descId">Total Stars Earned: 42, Total Commits  (last year) : 109, Total PRs: 6, Total Issues: 0, Contributed to (last year): 2</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 180.00238785633377;
+        stroke-dashoffset: 178.9906027827139;
       }
     }
   
@@ -162,7 +162,7 @@
         x="219.01"
         y="12.5"
         data-testid="stars"
-      >40</text>
+      >42</text>
     </g>
   </g><g transform="translate(0, 25)">
     <g class="stagger" style="animation-delay: 600ms" transform="translate(25, 0)">
