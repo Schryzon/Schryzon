@@ -36,7 +36,9 @@ Hey there, I'm **I Nyoman Widiyasa Jayananda** (aka **Jay** / **Schryzon**)! I'm
 
 I may rock a Neptunia profile picture, but I assure you my code goes *hard* and is fully enterprise-ready! I’ve been nerding out over IT since I was 13, racking up over **5 years of experience** (professional & non-professional). From deploying robust CI/CD pipelines to simulating Cisco networking protocols and making AI-integrated Discord bots, I love everything backend and infra.
 
-When I'm not untangling server configs, optimizing SQL queries, or maintaining my open-source projects, I'm probably deep into a cyberpunk novel or binge-watching my favorite sci-fi/fantasy anime!
+When I'm not untangling server configs, optimizing SQL queries, or maintaining my open-source projects, I'm probably wondering about Kingdom Hearts lore, watching some Kamen Rider, or developing some lore for Phantasm of Xydos...
+
+**Fun fact:** I love joining IT competitions! I usually dive in with an *"iseng-iseng berhadiah"* mindset—just participating for the fun of it with the hope of maybe snagging a prize. It's an awesome way for me to quickly level up my skills under pressure and network with other brilliant people in the tech sphere!
 
 > *"Meow, love Networking."* <br/>
 > *— Schryzon, 2026*
@@ -75,13 +77,16 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
     <img src="https://img.shields.io/badge/Netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=%2300C7B7" alt="Netlify"/>
     <img src="https://img.shields.io/badge/Tailscale-%2300ADD8?style=for-the-badge&logo=tailscale&logoColor=white" alt="Tailscale"/>
     <img src="https://img.shields.io/badge/CMake-%23008FBA.svg?style=for-the-badge&logo=cmake&logoColor=white" alt="CMake"/>
+    <img src="https://img.shields.io/badge/PM2-2B037A?style=for-the-badge&logo=pm2&logoColor=white" alt="PM2"/>
+    <img src="https://img.shields.io/badge/DigitalOcean-%230180FF.svg?style=for-the-badge&logo=digitalocean&logoColor=white" alt="DigitalOcean"/>
+    <img src="https://img.shields.io/badge/Google_Cloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud"/>
   </p>
 </div>
 
 ---
 
 ## 🚀 Showcases & Projects
-<p align="center"><i>A glimpse into the mad science I brew up in my IDE. Some of my proudest real-world builds:</i></p>
+<p align="center"><i>Some cool stuff that I've built, whether it's because I'm bored or because I wanted to do more for some assignments, zd</i></p>
 
 <div align="center">
   <a href="https://github.com/Schryzon/RVDiA">
@@ -93,11 +98,15 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
   </a>
   <br/><br/>
   <a href="https://github.com/Schryzon/3DEX">
-    <img src="./profile/pin-3dex.svg" alt="3D Tracking Edge" />
+    <img src="./profile/pin-3dex.svg" alt="3D Assets Marketplace" />
   </a>
   &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Schryzon/XFFS">
     <img src="./profile/pin-xffs.svg" alt="XFFS Filesystem" />
+  </a>
+  <br/><br/>
+  <a href="https://github.com/Schryzon/mpyCUDA">
+    <img src="./profile/pin-mpycuda.svg" alt="mpyCUDA MPI, Python, & CUDA" />
   </a>
   <br/><br/>
 </div>
