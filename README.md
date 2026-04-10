@@ -21,6 +21,9 @@
 <a href="https://g.dev/Jayananda">
 <img src="https://img.shields.io/badge/Google_Cloud-%23F4338F?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud Badge"/>
 </a>
+<a href="https://github.com/Schryzon/Schryzon/actions/workflows/grs.yml">
+<img src="https://img.shields.io/github/actions/workflow/status/Schryzon/Schryzon/grs.yml?branch=master&style=for-the-badge&logo=githubactions&logoColor=white" alt="Update README cards Workflow Status"/>
+</a>
 </div>
 
 ---
@@ -36,7 +39,7 @@ Hey there, I'm **I Nyoman Widiyasa Jayananda** (aka **Jay** / **Schryzon**)! I'm
 
 I may rock a Neptunia profile picture, but I assure you my code goes *hard* and is fully enterprise-ready! I’ve been nerding out over IT since I was 13, racking up over **5 years of experience** (professional & non-professional). From deploying robust CI/CD pipelines to simulating Cisco networking protocols and making AI-integrated Discord bots, I love everything backend and infra.
 
-When I'm not untangling server configs, optimizing SQL queries, or maintaining my open-source projects, I'm probably wondering about Kingdom Hearts lore, watching some Kamen Rider, or developing some lore for Phantasm of Xydos...
+When I'm not untangling server configs, optimizing SQL queries, or maintaining my open-source projects, I'm probably wondering about Kingdom Hearts lore, watching some Kamen Rider, or developing some lore for my Phantasm of Xydos series...
 
 **Fun fact:** I love joining IT competitions! I usually dive in with an *"iseng-iseng berhadiah"* mindset—just participating for the fun of it with the hope of maybe snagging a prize. It's an awesome way for me to quickly level up my skills under pressure and network with other brilliant people in the tech sphere!
 
