@@ -63,6 +63,14 @@ jobs:
           path: profile/pin-xffs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Generate mpyCUDA pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=Schryzon&repo=mpyCUDA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+          path: profile/pin-mpycuda.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
       - name: GitHub Streak Card Generator
         uses: muhammad-fiaz/github-readme-streak-stats@v1.0.1
         with:
