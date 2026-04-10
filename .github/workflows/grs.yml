@@ -31,12 +31,36 @@ jobs:
           path: profile/top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate pin card
+      - name: Generate RVDiA pin card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: pin
-          options: username=readme-tools&repo=github-readme-stats
-          path: profile/pin-readme-tools-github-readme-stats.svg
+          options: username=Schryzon&repo=RVDiA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+          path: profile/pin-rvdia.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate NetTracer pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=Schryzon&repo=NetTracer&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+          path: profile/pin-nettracer.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate 3DEX pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=Schryzon&repo=3DEX&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+          path: profile/pin-3dex.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate XFFS pin card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: pin
+          options: username=Schryzon&repo=XFFS&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+          path: profile/pin-xffs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: GitHub Streak Card Generator
