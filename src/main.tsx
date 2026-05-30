@@ -10,7 +10,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename={import.meta.env.BASE_URL}>
             <Routes>
                 <Route path="/" element={<Portfolio />} />
                 <Route path="/admin" element={<Admin />} />
