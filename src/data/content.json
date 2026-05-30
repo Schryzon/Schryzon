@@ -8,7 +8,8 @@
             "Building robust backend & ML systems since 2021",
             "CI/CD pipelines that actually work",
             "Lo and behold, my great prowess",
-            "Henshin!"
+            "Henshin!",
+            "KAMEN RIDE: SCHRYZON!"
         ],
         "avatar_url": "https://avatars.githubusercontent.com/u/89343611?v=4",
         "location": "Mataram, West Nusa Tenggara",
@@ -28,8 +29,8 @@
             "Active Contributor to HMIF-FT UNRAM",
             "Former Vice President of G-Tech Resman",
             "Creator of RVDiA Discord bot (30,000+ users)",
-            "Limited working proficiency in Japanese and Mandarin",
-            "Kamen Rider & Tokusatsu enthusiast",
+            "Overly committed for my own good at times",
+            "Heisei Kamen Rider & Ultraman enthusiast",
             "Despite making myself look serious, I am actually laughing my ass off deep inside lol"
         ],
         "languages": [
@@ -78,6 +79,10 @@
                 {
                     "name": "Bash",
                     "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                },
+                {
+                    "name": "CUDA",
+                    "icon_url": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TlZJRElBPC90aXRsZT48cGF0aCBkPSJNOC45NDggOC43OTh2LTEuNDNhNi43IDYuNyAwIDAgMSAuNDI0LS4wMThjMy45MjItLjEyNCA2LjQ5MyAzLjM3NCA2LjQ5MyAzLjM3NHMtMi43NzQgMy44NTEtNS43NSAzLjg1MWMtLjM5OCAwLS43ODctLjA2Mi0xLjE1OC0uMTg1di00LjM0NmMxLjUyOC4xODUgMS44MzcuODU3IDIuNzQ3IDIuMzg1bDIuMDQtMS43MTRzLTEuNDkyLTEuOTUyLTQtMS45NTJhNi4wMTYgNi4wMTYgMCAwIDAtLjc5Ni4wMzVtMC00LjczNXYyLjEzOGwuNDI0LS4wMjdjNS40NS0uMTg1IDkuMDEgNC40NyA5LjAxIDQuNDdzLTQuMDggNC45NjQtOC4zMyA0Ljk2NGMtLjM3IDAtLjczMy0uMDM1LTEuMDk1LS4wOTd2MS4zMjVjLjMuMDM1LjYxLjA2Mi45MS4wNjIgMy45NTcgMCA2LjgyLTIuMDIzIDkuNTkzLTQuNDA4LjQ1OS4zNzEgMi4zNCAxLjI2MyAyLjczIDEuNjUyLTIuNjMzIDIuMjA4LTguNzcyIDMuOTg0LTEyLjI1MyAzLjk4NC0uMzM1IDAtLjY1My0uMDE4LS45NzEtLjA1M3YxLjg2NEgyNFY0LjA2M3ptMCAxMC4zMjZ2MS4xMzFjLTMuNjU3LS42NTQtNC42NzMtNC40Ni00LjY3My00LjQ2czEuNzU4LTEuOTQ0IDQuNjczLTIuMjYydjEuMjM3SDguOTRjLTEuNTI4LS4xODYtMi43MyAxLjI0NS0yLjczIDEuMjQ1cy42OCAyLjQxMiAyLjczOSAzLjExTTIuNDU2IDEwLjlzMi4xNjQtMy4xOTcgNi41LTMuNTMzVjYuMjAxQzQuMTUzIDYuNTkgMCAxMC42NTMgMCAxMC42NTNzMi4zNSA2LjgwMiA4Ljk0OCA3LjQydi0xLjIzN2MtNC44NC0uNi02LjQ5Mi01LjkzNi02LjQ5Mi01LjkzNnoiLz48L3N2Zz4="
                 }
             ]
         },
@@ -102,7 +107,7 @@
                 },
                 {
                     "name": "MinIO",
-                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/objectivec/objectivec-plain.svg"
+                    "icon_url": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TWluSU88L3RpdGxlPjxwYXRoIGQ9Ik0xMy4yMDcyLjAwNmMtLjYyMTYtLjA0NzgtMS4yLjE5NDMtMS42MjExLjU4MmEyLjE1IDIuMTUgMCAwIDAtLjA5MzggMy4wMzUybDMuNDA4MiAzLjU1MDdhMy4wNDIgMy4wNDIgMCAwIDEtLjY2NCA0LjY4NzVsLS40NjMuMjM4M1Y3LjI4NTNhMTUuNDE5OCAxNS40MTk4IDAgMCAwLTguMDE3NCAxMC40ODYydi4wMTc2bDYuNTQ4Ny0zLjMyODF2Ny42MjFMMTMuNzc5NCAyNFYxMy42ODE3bC44OTY1LS40NjI5YTQuNDQzMiA0LjQ0MzIgMCAwIDAgMS4yMjA3LTcuMDI5MmwtMy4zNzEtMy41MjU0YS43NDg5Ljc0ODkgMCAwIDEtLjAzNy0xLjA1NDcuNzUyMi43NTIyIDAgMCAxIDEuMDU2Ny4wMzcxbC40NjY4LjQ4NjMtLjAwNi4wMDU5IDQuMDcwNCA0LjI0NDFhLjA1NjYuMDU2NiAwIDAgMCAuMDgyIDAgLjA2LjA2IDAgMCAwIDAtLjA3MDNsLTMuMTQwNi01LjE0MjUtLjE0ODQuMTQyNS4xNDg0LS4xNDQ1QzE0LjQ5NDUuMzkyNiAxMy44Mjg3LjA1MzggMTMuMjA3Mi4wMDZabS0uOTAyNCA5Ljg2NTJ2Mi45OTQxbC00LjE1MjMgMi4xNDg0YTEzLjk3ODcgMTMuOTc4NyAwIDAgMSAyLjc2NzYtMy45Mjc3IDE0LjE3ODQgMTQuMTc4NCAwIDAgMSAxLjM4NDctMS4yMTQ4eiIvPjwvc3ZnPg=="
                 },
                 {
                     "name": "AIOHTTP",
@@ -127,7 +132,7 @@
                 },
                 {
                     "name": "GitHub Actions",
-                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg"
                 },
                 {
                     "name": "Google Cloud",
@@ -144,6 +149,14 @@
                 {
                     "name": "Vercel",
                     "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                },
+                {
+                    "name": "Railway",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/railway/railway-original.svg"
+                },
+                {
+                    "name": "GitHub",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                 },
                 {
                     "name": "Git",
@@ -366,49 +379,49 @@
     ],
     "competitions": [
         {
-            "name": "\ud83c\udfc6 | TechSprint Innovation Cup Web Developer Competition",
+            "name": "🏆 | TechSprint Innovation Cup Web Developer Competition",
             "year": 2026,
             "result": "Attained 48th / 112th place with 3Dex",
             "organizer": "CodeLab Indonesia"
         },
         {
-            "name": "\ud83c\udfc6 | MCF ITB Data Science Competition",
+            "name": "🏆 | MCF ITB Data Science Competition",
             "year": 2026,
             "result": "Ranked #61 out of 329 teams (14% MAPE)",
             "organizer": "Institut Teknologi Bandung (ITB)"
         },
         {
-            "name": "\ud83c\udfc6 | #JuaraGCP Season 12 Tier 3 Winner",
+            "name": "🏆 | #JuaraGCP Season 12 Tier 3 Winner",
             "year": 2026,
             "result": "Rank 271 out of 10000+ competitors",
             "organizer": "Google Developers Indonesia"
         },
         {
-            "name": "\ud83d\udcb0 | PPBRI Scholarship Ganjil 2025-2026",
+            "name": "💰 | PPBRI Scholarship Ganjil 2025-2026",
             "year": 2025,
             "result": "Scholarship Awardee (4.0 GPA)",
             "organizer": "Bank Rakyat Indonesia (BRI)"
         },
         {
-            "name": "\ud83e\udd48 | 2nd Runner Up & Bronze Award Pesta Data Nasional (PeDaS)",
+            "name": "🥈 | 2nd Runner Up & Bronze Award Pesta Data Nasional (PeDaS)",
             "year": 2025,
             "result": "Time Series Forecasting: Indonesian Automotives",
             "organizer": "APTIKOM"
         },
         {
-            "name": "\ud83c\udfc6 | #JuaraGCP Season 11 Tier 2 Winner",
+            "name": "🏆 | #JuaraGCP Season 11 Tier 2 Winner",
             "year": 2025,
             "result": "Tier 2 Winner (Top 1000)",
             "organizer": "Google Developers Indonesia"
         },
         {
-            "name": "\ud83d\udcb0 | PPBRI Scholarship Genap 2024-2025",
+            "name": "💰 | PPBRI Scholarship Genap 2024-2025",
             "year": 2025,
             "result": "Scholarship Awardee (4.0 GPA)",
             "organizer": "Bank Rakyat Indonesia (BRI)"
         },
         {
-            "name": "\ud83d\udc65 | Ephotech IT Olympiad",
+            "name": "👥 | Ephotech IT Olympiad",
             "year": 2023,
             "result": "Committee Member",
             "organizer": "G-Tech Resman"
@@ -702,8 +715,8 @@
         },
         {
             "platform": "Discord Bot",
-            "url": "https://top.gg/bot/957471338577166417",
-            "label": "RVDiA on Top.gg"
+            "url": "https://discord.com/discovery/applications/957471338577166417",
+            "label": "RVDiA on Discord"
         }
     ]
 }

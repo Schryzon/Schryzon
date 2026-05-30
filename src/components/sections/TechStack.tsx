@@ -22,7 +22,7 @@ export default function TechStack({ data }: TechStackProps) {
                             <div className="skills-group-title">{group.category}</div>
                             <div className="skills-grid">
                                 {group.skills.map((skill) => (
-                                    <div key={skill.name} className="glass-card skill-card">
+                                    <div key={skill.name} className="glass-card skill-card" data-skill={skill.name}>
                                         <img
                                             src={skill.icon_url}
                                             alt={skill.name}

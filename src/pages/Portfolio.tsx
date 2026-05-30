@@ -13,6 +13,11 @@ import FutureVision from '../components/sections/FutureVision'
 import Blog from '../components/sections/Blog'
 import Contact from '../components/sections/Contact'
 
+// Premium interactive assets
+import DevOpsTerminal from '../components/ui/DevOpsTerminal'
+import ScrollToTop from '../components/ui/ScrollToTop'
+import AccentCustomizer from '../components/ui/AccentCustomizer'
+
 const content = content_data as SiteContent
 
 export default function Portfolio() {
@@ -21,6 +26,15 @@ export default function Portfolio() {
             <Navbar />
             <main>
                 <Hero data={content.hero} />
+
+                <div className="section-divider" />
+                
+                {/* Interactive DevOps Console Section */}
+                <section className="section" id="terminal" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+                    <div className="container">
+                        <DevOpsTerminal />
+                    </div>
+                </section>
 
                 <div className="section-divider" />
                 <About data={content.about} />
@@ -53,6 +67,11 @@ export default function Portfolio() {
                 <Contact data={content.social_links} />
             </main>
             <Footer />
+
+            {/* Floating Premium Controls */}
+            <AccentCustomizer />
+            <ScrollToTop />
         </>
     )
 }
+

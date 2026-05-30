@@ -129,10 +129,18 @@ export default function Admin() {
         <div className="admin-page">
             <div className="admin-layout">
                 <aside className="admin-sidebar">
-                    <div className="admin-sidebar-header">
-                        <div className="admin-sidebar-title">// admin panel</div>
-                        <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
-                            schryzon.github.io
+                    <div className="admin-sidebar-top">
+                        <div className="admin-sidebar-header">
+                            <div className="admin-sidebar-title">// admin panel</div>
+                            <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)', marginTop: '0.25rem', fontFamily: 'var(--font-mono)' }}>
+                                schryzon.github.io
+                            </div>
+                        </div>
+                        <div className="admin-sidebar-logout-wrapper">
+                            <button className="admin-logout-btn" onClick={handle_logout}>
+                                <LogOut size={12} className="admin-logout-icon" />
+                                Logout
+                            </button>
                         </div>
                     </div>
                     <ul className="admin-nav">
@@ -147,16 +155,10 @@ export default function Admin() {
                             </li>
                         ))}
                     </ul>
-                    <div style={{ padding: '1rem 1.5rem', marginTop: 'auto', borderTop: '1px solid var(--border-subtle)' }}>
-                        <button className="admin-logout-btn" onClick={handle_logout}>
-                            <LogOut size={12} style={{ display: 'inline', marginRight: '0.4rem' }} />
-                            Logout
-                        </button>
-                    </div>
                 </aside>
 
-                <div style={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
-                    <div className="admin-main" style={{ flex: 1, overflowY: 'auto' }}>
+                <div className="admin-content-wrapper">
+                    <div className="admin-main">
                         {active === 'hero' && <HeroEditor content={content} update={update} />}
                         {active === 'about' && <AboutEditor content={content} update={update} />}
                         {active === 'projects' && <ProjectsEditor content={content} update={update} />}

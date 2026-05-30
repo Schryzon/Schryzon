@@ -1,9 +1,16 @@
 import type { TargetRole } from '../../types/content'
 import ScrollReveal from '../ui/ScrollReveal'
-import { Briefcase } from 'lucide-react'
+import { Briefcase, Cloud, Infinity, Server, Cpu } from 'lucide-react'
 
 interface TargetRolesProps {
     data: TargetRole[]
+}
+
+const ROLE_ICONS: Record<string, React.ComponentType<{ size?: number; color?: string }>> = {
+    'Cloud Engineer': Cloud,
+    'DevOps Engineer': Infinity,
+    'Backend Developer': Server,
+    'Platform Engineer': Cpu,
 }
 
 export default function TargetRoles({ data }: TargetRolesProps) {
@@ -18,17 +25,20 @@ export default function TargetRoles({ data }: TargetRolesProps) {
                 </ScrollReveal>
 
                 <div className="roles-grid">
-                    {data.map((role, i) => (
-                        <ScrollReveal key={role.title} delay={i * 0.08}>
-                            <article className="glass-card role-card">
-                                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
-                                    <Briefcase size={16} color="var(--accent-bright)" />
-                                    <div className="role-title">{role.title}</div>
-                                </div>
-                                <p className="role-description">{role.description}</p>
-                            </article>
-                        </ScrollReveal>
-                    ))}
+                    {data.map((role, i) => {
+                        const IconComponent = ROLE_ICONS[role.title] || Briefcase
+                        return (
+                            <ScrollReveal key={role.title} delay={i * 0.08}>
+                                <article className="glass-card role-card">
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
+                                        <IconComponent size={16} color="var(--accent-bright)" />
+                                        <div className="role-title">{role.title}</div>
+                                    </div>
+                                    <p className="role-description">{role.description}</p>
+                                </article>
+                            </ScrollReveal>
+                        )
+                    })}
                 </div>
             </div>
         </section>
