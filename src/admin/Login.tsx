@@ -89,6 +89,8 @@ export default function AdminLogin({ on_success }: LoginProps) {
                     fontSize: '0.8rem',
                     color: 'var(--text-muted)',
                     fontFamily: 'var(--font-mono)',
+                    wordBreak: 'break-all',
+                    whiteSpace: 'pre-wrap',
                 }}>
                     To set your passphrase hash, open DevTools console and run:<br />
                     <code style={{ color: 'var(--accent-bright)' }}>

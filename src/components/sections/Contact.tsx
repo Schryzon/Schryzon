@@ -1,7 +1,7 @@
 import type { SocialLink } from '../../types/content'
 import ScrollReveal from '../ui/ScrollReveal'
 import { Globe } from 'lucide-react'
-import { SiGithub, SiGooglechrome, SiDiscord, SiTopdotgg } from '@icons-pack/react-simple-icons'
+import { SiGithub, SiGooglecloud, SiDiscord } from '@icons-pack/react-simple-icons'
 import LinkedInIcon from '../ui/LinkedInIcon'
 
 interface ContactProps {
@@ -11,8 +11,8 @@ interface ContactProps {
 const PLATFORM_ICONS: Record<string, React.ReactNode> = {
     GitHub: <SiGithub size={20} />,
     LinkedIn: <LinkedInIcon size={20} />,
-    'Google Dev': <SiGooglechrome size={20} />,
-    'Discord Bot': <SiTopdotgg size={20} />,
+    'Google Dev': <SiGooglecloud size={20} />,
+    'Discord Bot': <SiDiscord size={20} />,
     Discord: <SiDiscord size={20} />,
 }
 
