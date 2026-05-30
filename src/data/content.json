@@ -3,11 +3,11 @@
         "name": "I Nyoman Widiyasa Jayananda",
         "handle": "Schryzon",
         "taglines": [
+            "Informatics Engineering '24 UNRAM",
             "Jr. Machine Learning & Backend Engineer",
-            "Ex-Vice President of G-Tech Resman",
             "Building robust backend & ML systems since 2021",
             "CI/CD pipelines that actually work",
-            "Lo and behold, my great prowess.",
+            "Lo and behold, my great prowess",
             "Henshin!"
         ],
         "avatar_url": "https://avatars.githubusercontent.com/u/89343611?v=4",
@@ -25,6 +25,7 @@
         "years_experience": 5,
         "fun_facts": [
             "Informatics Engineering student at Universitas Mataram (GPA: 4.00/4.00)",
+            "Active Contributor to HMIF-FT UNRAM",
             "Former Vice President of G-Tech Resman",
             "Creator of RVDiA Discord bot (30,000+ users)",
             "Limited working proficiency in Japanese and Mandarin",
