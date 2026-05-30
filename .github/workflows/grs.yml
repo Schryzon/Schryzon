@@ -1,91 +1,99 @@
 name: Update README cards
 
 on:
-  push:
-    branches:
-      - master
-  schedule:
-    - cron: "0 */4 * * *" # Runs every 4 hours
-  workflow_dispatch:
+    push:
+        branches:
+            - master
+    schedule:
+        - cron: "0 */4 * * *" # Runs every 4 hours
+    workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    permissions:
-      contents: write
+        permissions:
+            contents: write
 
-    steps:
-      - uses: actions/checkout@v6
+        steps:
+            - uses: actions/checkout@v6
 
-      - name: Generate stats card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: stats
-          options: username=${{ github.repository_owner }}&show_icons=true&theme=dark
-          path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate stats card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: stats
+                  options: username=${{ github.repository_owner }}&show_icons=true&theme=dark
+                  path: profile/stats.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate top languages card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: top-langs
-          options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&theme=dark
-          path: profile/top-langs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate top languages card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: top-langs
+                  options: username=${{ github.repository_owner }}&layout=compact&langs_count=8&theme=dark
+                  path: profile/top-langs.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate RVDiA pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=Schryzon&repo=RVDiA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-          path: profile/pin-rvdia.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate yomu pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=yomu&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-yomu.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate NetTracer pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=Schryzon&repo=NetTracer&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-          path: profile/pin-nettracer.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate RVDiA pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=RVDiA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-rvdia.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate 3DEX pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=Schryzon&repo=3DEX&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-          path: profile/pin-3dex.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate NetTracer pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=NetTracer&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-nettracer.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate XFFS pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=Schryzon&repo=XFFS&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-          path: profile/pin-xffs.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate 3DEX pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=3DEX&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-3dex.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Generate mpyCUDA pin card
-        uses: readme-tools/github-readme-stats-action@v1
-        with:
-          card: pin
-          options: username=Schryzon&repo=mpyCUDA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-          path: profile/pin-mpycuda.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate XFFS pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=XFFS&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-xffs.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: GitHub Streak Card Generator
-        uses: muhammad-fiaz/github-readme-streak-stats@v1.0.1
-        with:
-          USERNAME: ${{ github.repository_owner }}
-          THEME: midnight-purple
-          OUTPUT_PATH: profile/streak.svg
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: Generate mpyCUDA pin card
+              uses: readme-tools/github-readme-stats-action@v1
+              with:
+                  card: pin
+                  options: username=Schryzon&repo=mpyCUDA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-mpycuda.svg
+                  token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit cards
-        run: |
-          git config user.name "Schryzon"
-          git config user.email "89343611+Schryzon@users.noreply.github.com"
-          git add profile/*.svg
-          git commit -m "Update README cards" || exit 0
-          git push
+            - name: GitHub Streak Card Generator
+              uses: muhammad-fiaz/github-readme-streak-stats@v1.0.1
+              with:
+                  USERNAME: ${{ github.repository_owner }}
+                  THEME: midnight-purple
+                  OUTPUT_PATH: profile/streak.svg
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+            - name: Commit cards
+              run: |
+                  git config user.name "Schryzon"
+                  git config user.email "89343611+Schryzon@users.noreply.github.com"
+                  git add profile/*.svg
+                  git commit -m "Update README cards" || exit 0
+                  git push

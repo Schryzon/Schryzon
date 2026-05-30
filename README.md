@@ -9,8 +9,14 @@
 </a>
 <br/>
 <!-- PROFILE BADGES & LINKEDIN -->
+<a href="https://schryzon.github.io">
+<img src="https://img.shields.io/badge/Live_Portfolio-schryzon.github.io-9b59e6?style=for-the-badge&logo=react&logoColor=white" alt="Live Portfolio Badge"/>
+</a>
+<a href="https://github.com/Schryzon/yomu">
+<img src="https://img.shields.io/badge/yōmu!-9b59e6?style=for-the-badge&logo=google-chrome&logoColor=white" alt="yōmu! Badge"/>
+</a>
 <a href="https://linkedin.com/in/schryzon">
-<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjU2JyBoZWlnaHQ9JzI1NicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCcgdmlld0JveD0nMCAwIDI1NiAyNTYnPjxwYXRoIGQ9J00yMTguMTIzIDIxOC4xMjdoLTM3LjkzMXYtNTkuNDAzYzAtMTQuMTY1LS4yNTMtMzIuNC0xOS43MjgtMzIuNC0xOS43NTYgMC0yMi43NzkgMTUuNDM0LTIyLjc3OSAzMS4zNjl2NjAuNDNoLTM3LjkzVjk1Ljk2N2gzNi40MTN2MTYuNjk0aC41MWEzOS45MDcgMzkuOTA3IDAgMCAxIDM1LjkyOC0xOS43MzNjMzguNDQ1IDAgNDUuNTMzIDI1LjI4OCA0NS41MzMgNTguMTg2bC0uMDE2IDY3LjAxM1pNNTYuOTU1IDc5LjI3Yy0xMi4xNTcuMDAyLTIyLjAxNC05Ljg1Mi0yMi4wMTYtMjIuMDA5LS4wMDItMTIuMTU3IDkuODUxLTIyLjAxNCAyMi4wMDgtMjIuMDE2IDEyLjE1Ny0uMDAzIDIyLjAxNCA5Ljg1MSAyMi4wMTYgMjIuMDA4QTIyLjAxMyAyMi4wMTMgMCAwIDEgNTYuOTU1IDc5LjI3bTE4Ljk2NiAxMzguODU4SDM3Ljk1Vjk1Ljk2N2gzNy45N3YxMjIuMTZaTTIzNy4wMzMuMDE4SDE4Ljg5QzguNTgtLjA5OC4xMjUgOC4xNjEtLjAwMSAxOC40NzF2MjE5LjA1M2MuMTIyIDEwLjMxNSA4LjU3NiAxOC41ODIgMTguODkgMTguNDc0aDIxOC4xNDRjMTAuMzM2LjEyOCAxOC44MjMtOC4xMzkgMTguOTY2LTE4LjQ3NFYxOC40NTRjLS4xNDctMTAuMzMtOC42MzUtMTguNTg4LTE4Ljk2Ni0xOC40NTMnIGZpbGw9JyNmZmYnLz48L3N2Zz4K&logoColor=white" alt="LinkedIn Badge"/>
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0nMjU2JyBoZWlnaHQ9JzI1NicgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSd4TWlkWU1pZCcgdmlld0JveD0nMCAwIDI1NiAyNTYnPjxwYXRoIGQ9J00yMTguMTIzIDIxOC4xMjdoLTM3LjkzMXYtNTkuNDAzYzAtMTQuMTY1LS4yNTMtMzIuNC0xOS43MjgtMzIuNC0xOS43NTYgMC0yMi43NzkgMTUuNDM0LTIyLjc3OSAzMS4zNjl2NjAuNDNoLTM3LjkzVjk1Ljk2N2gzNi40MTN2MTXuNjk0aC41MWEzOS45MDcgMzkuOTA3IDAgMCAxIDM1LjkyOC0xOS43MzNjMzguNDQ1IDAgNDUuNTMzIDI1LjI4OCA0NS41MzMgNTguMTg2bC0uMDE2IDY3LjAxM1pNNTYuOTU1IDc5LjI3Yy0xMi4xNTcuMDAyLTIyLjAxNC05Ljg1Mi0yMi4wMTYtMjIuMDA5LS4wMDItMTIuMTU3IDkuODUxLTIyLjAxNCAyMi4wMDgtMjIuMDE2IDEyLjE1Ny0uMDAzIDIyLjAxNCA5Ljg1MSAyMi4wMTYgMjIuMDA4QTIyLjAxMyAyMi4wMTMgMCAwIDEgNTYuOTU1IDc5LjI3bTE4Ljk2NiAxMzguODU4SDM3Ljk1Vjk1Ljk2N2gzNy45N3YxMjIuMTZaTTIzNy4wMzMuMDE4SDE4Ljg5QzguNTgtLjA5OC4xMjUgOC4xNjEtLjAwMSAxOC40NzF2MjE5LjA1M2MuMTIyIDEwLjMxNSA4LjU3NiAxOC41ODIgMTguODkgMTguNDc0aDIxOC4xNDRjMTAuMzM2LjEyOCAxOC44MjMtOC4xMzkgMTguOTY2LTE4LjQ3NFYxOC40NTRjLS4xNDctMTAuMzMtOC42MzUtMTguNTg4LTE4Ljk2Ni0xOC40NTMnIGZpbGw9JyNmZmYnLz48L3N2Zz4K&logoColor=white" alt="LinkedIn Badge"/>
 </a>
 <a href="https://top.gg/bot/957471338577166417">
 <img src="https://img.shields.io/badge/RVDiA_Bot-7289DA?style=for-the-badge&logo=top.gg&logoColor=white" alt="Top.gg Badge"/>
@@ -41,10 +47,10 @@ I may rock a Neptunia profile picture, but I assure you my code goes *hard* and 
 
 When I'm not untangling server configs, optimizing SQL queries, or maintaining my open-source projects, I'm probably wondering about Kingdom Hearts lore, watching some Kamen Rider, or developing some lore for my Phantasm of Xydos series...
 
-**Fun fact:** I love joining IT competitions! I usually dive in with an *"iseng-iseng berhadiah"* mindset—just participating for the fun of it with the hope of maybe snagging a prize. It's an awesome way for me to quickly level up my skills under pressure and network with other brilliant people in the tech sphere!
+**Fun fact:** I love joining IT competitions! I usually dive in with an *"iseng-iseng berhadiah"* mindset - just participating for the fun of it with the hope of maybe snagging a prize. It's an awesome way for me to quickly level up my skills under pressure and network with other brilliant people in the tech sphere!
 
 > *"Meow, love Networking."* <br/>
-> *— Schryzon, 2026*
+> *- Schryzon, 2026*
 
 <br clear="both" />
 
@@ -92,27 +98,47 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
 <p align="center"><i>Some cool stuff that I've built, whether it's because I'm bored or because I wanted to do more for some assignments, zd</i></p>
 
 <div align="center">
+  <a href="https://github.com/Schryzon/yomu">
+    <img src="./profile/pin-yomu.svg" alt="yōmu! Furigana pronunciation guides & NLP web augmentation layer" />
+  </a>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Schryzon/RVDiA">
     <img src="./profile/pin-rvdia.svg" alt="RVDiA AI Discord Bot" />
   </a>
-  &nbsp;&nbsp;&nbsp;
+  <br/><br/>
   <a href="https://github.com/Schryzon/NetTracer">
     <img src="./profile/pin-nettracer.svg" alt="NetTracer Cisco Simulator" />
   </a>
-  <br/><br/>
-  <a href="https://github.com/Schryzon/3DEX">
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Schryzon/3Dex">
     <img src="./profile/pin-3dex.svg" alt="3D Assets Marketplace" />
   </a>
-  &nbsp;&nbsp;&nbsp;
+  <br/><br/>
   <a href="https://github.com/Schryzon/XFFS">
     <img src="./profile/pin-xffs.svg" alt="XFFS Filesystem" />
   </a>
-  <br/><br/>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Schryzon/mpyCUDA">
     <img src="./profile/pin-mpycuda.svg" alt="mpyCUDA MPI, Python, & CUDA" />
   </a>
   <br/><br/>
 </div>
+
+---
+
+## 🌐 Portfolio Access & Local Development
+
+This repository contains the source code for my premium, dark-purple glassmorphic portfolio site!
+
+* **Live Site**: [schryzon.github.io](https://schryzon.github.io)
+* **Admin Dashboard**: Accessible at [schryzon.github.io/admin](https://schryzon.github.io/admin) (authenticated via passphrase + GitHub PAT for direct content updates).
+
+### 🛠️ Local Setup
+To run the portfolio environment locally:
+```bash
+npm install
+npm run dev
+```
 
 ---
 
