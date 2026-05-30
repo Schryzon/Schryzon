@@ -1,0 +1,708 @@
+{
+    "hero": {
+        "name": "I Nyoman Widiyasa Jayananda",
+        "handle": "Schryzon",
+        "taglines": [
+            "Jr. Machine Learning & Backend Engineer",
+            "Ex-Vice President of G-Tech Resman",
+            "Building robust backend & ML systems since 2021",
+            "CI/CD pipelines that actually work",
+            "Lo and behold, my great prowess.",
+            "Henshin!"
+        ],
+        "avatar_url": "https://avatars.githubusercontent.com/u/89343611?v=4",
+        "location": "Mataram, West Nusa Tenggara",
+        "open_to_work": true
+    },
+    "about": {
+        "bio": [
+            "Hey! I am I Nyoman Widiyasa Jayananda, also known as Jay or Schryzon. I am a Junior Machine Learning and Backend Engineer, currently pursuing a Bachelor of Informatics Engineering at the University of Mataram, Indonesia.",
+            "With over five years of experience since 2021, I have successfully developed and maintained complex public systems. I served as the Vice President of G-Tech Resman, where I led technical training and built RVDiA - a verified Discord bot with 30k+ users.",
+            "When I am not training neural networks, designing REST APIs, or tuning databases, I am probably writing lore, watching Kamen Rider Tokusatsu, or learning Japanese (which I speak at a limited working proficiency)."
+        ],
+        "quote": "Lo and behold, my great prowess.",
+        "quote_author": "I Nyoman Widiyasa Jayananda",
+        "years_experience": 5,
+        "fun_facts": [
+            "Informatics Engineering student at Universitas Mataram (GPA: 4.00/4.00)",
+            "Former Vice President of G-Tech Resman",
+            "Creator of RVDiA Discord bot (30,000+ users)",
+            "Limited working proficiency in Japanese and Mandarin",
+            "Kamen Rider & Tokusatsu enthusiast",
+            "Despite making myself look serious, I am actually laughing my ass off deep inside lol"
+        ],
+        "languages": [
+            {
+                "name": "Indonesian",
+                "proficiency": "Native"
+            },
+            {
+                "name": "English",
+                "proficiency": "Bilingual (Duolingo: 130)"
+            },
+            {
+                "name": "Japanese",
+                "proficiency": "Limited working proficiency"
+            },
+            {
+                "name": "Mandarin",
+                "proficiency": "Limited working proficiency"
+            }
+        ]
+    },
+    "skills": [
+        {
+            "category": "Languages",
+            "skills": [
+                {
+                    "name": "Python",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                },
+                {
+                    "name": "C++",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+                },
+                {
+                    "name": "Java",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+                },
+                {
+                    "name": "JavaScript",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "name": "TypeScript",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                },
+                {
+                    "name": "Bash",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                }
+            ]
+        },
+        {
+            "category": "Backend & Databases",
+            "skills": [
+                {
+                    "name": "PostgreSQL",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                },
+                {
+                    "name": "MongoDB",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                },
+                {
+                    "name": "MySQL",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                },
+                {
+                    "name": "Flask",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"
+                },
+                {
+                    "name": "MinIO",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/objectivec/objectivec-plain.svg"
+                },
+                {
+                    "name": "AIOHTTP",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                }
+            ]
+        },
+        {
+            "category": "Infrastructure & Cloud",
+            "skills": [
+                {
+                    "name": "Linux",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+                },
+                {
+                    "name": "Docker",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                },
+                {
+                    "name": "Nginx",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg"
+                },
+                {
+                    "name": "GitHub Actions",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                },
+                {
+                    "name": "Google Cloud",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                },
+                {
+                    "name": "DigitalOcean",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg"
+                },
+                {
+                    "name": "Cloudflare",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg"
+                },
+                {
+                    "name": "Vercel",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg"
+                },
+                {
+                    "name": "Git",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                },
+                {
+                    "name": "CMake",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cmake/cmake-original.svg"
+                }
+            ]
+        }
+    ],
+    "featured_projects": [
+        {
+            "repo": "yomu",
+            "description_override": "A lightweight, dynamic linguistic augmentation layer for the web. yomu injects real-time pronunciation guides (Furigana, Pinyin, and Transliterations) directly above the text in the DOM, keeping you in a state of reading flow. Powered by a Manifest V3 browser extension, Fast Python FastAPI server deployed on Google Cloud Run, and Gemini Flash-latest for deep grammar analysis.",
+            "tags": [
+                "Python",
+                "FastAPI",
+                "NLP",
+                "Google Cloud Run",
+                "Chrome Extension",
+                "AI"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "3Dex",
+            "description_override": "3D services and asset marketplace where 3D artists and 3D printers get their fair share of both profit and exposure.",
+            "tags": [
+                "Next.js",
+                "React",
+                "PostgreSQL",
+                "Docker",
+                "Marketplace"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "XFFS",
+            "description_override": "A teaching-oriented user-space filesystem written in C++17 with bitmap allocation, directory structures, and inode design.",
+            "tags": [
+                "C++",
+                "Systems",
+                "Filesystem",
+                "C++17"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "NetTracer",
+            "description_override": "Java-based Cisco IOS and Spanning Tree Protocol (STP) simulator for network topology analysis and learning.",
+            "tags": [
+                "Java",
+                "Networking",
+                "Cisco",
+                "STP"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "Kanzeon",
+            "description_override": "A fullstack text summarizer utilizing a fine-tuned Google T5-Large model. Designed for clarity among chaos.",
+            "tags": [
+                "Python",
+                "Machine Learning",
+                "T5",
+                "Transformers",
+                "NLP"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "Neuro-CPP",
+            "description_override": "A TUI AI Chatbot application made in C++. Created as a group project for University of Mataram's Algorithms and Programming course.",
+            "tags": [
+                "C++",
+                "TUI",
+                "AI",
+                "Algorithms"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "RVDiA",
+            "description_override": "A verified multipurpose Discord Bot with 23k+ users. Features Google Gemini integration, a turn-based RPG system, and advanced image processing with OpenCV.",
+            "tags": [
+                "Python",
+                "Discord",
+                "AI",
+                "PostgreSQL",
+                "Docker"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "RVDiA-WA",
+            "description_override": "The WhatsApp version (the twin sister) of RVDiA, utilizing Quart and Python.",
+            "tags": [
+                "Python",
+                "WhatsApp",
+                "Quart",
+                "AsyncIO"
+            ],
+            "featured": true
+        },
+        {
+            "repo": "mpyCUDA",
+            "description_override": "Python-wrapped MPI and CUDA experiments for parallel and GPU computing research.",
+            "tags": [
+                "Python",
+                "CUDA",
+                "MPI",
+                "HPC"
+            ],
+            "featured": true
+        }
+    ],
+    "experience": [
+        {
+            "org": "University of Mataram",
+            "role": "Programming Lead Assistant Lecturer",
+            "period": "Apr 2026 - Present",
+            "description": "Leading assistant lecturing tasks for programming courses, supervising lab sessions, and guiding Informatics students.",
+            "type": "work"
+        },
+        {
+            "org": "HMIF FT-UNRAM",
+            "role": "Linear Algebra & Programming Mentor",
+            "period": "Mar 2026 - May 2026",
+            "description": "Mentoring fellow undergraduate students in linear algebra and core programming topics to build robust fundamentals.",
+            "type": "work"
+        },
+        {
+            "org": "University of Mataram",
+            "role": "Digital Systems Assistant Lecturer",
+            "period": "Sep 2025 - Dec 2025",
+            "description": "Successfully taught and assisted a group of 7 students from the international class in digital systems design.",
+            "type": "work"
+        },
+        {
+            "org": "HMIF FT-UNRAM",
+            "role": "Web Developer Training Participant",
+            "period": "Aug 2025 - Oct 2025",
+            "description": "Completed intensive training, achieving the Best Project 3 certificate for high-quality web implementation.",
+            "type": "org"
+        },
+        {
+            "org": "Google Cloud Arcade Facilitator Program",
+            "role": "Indonesian Facilitator 2025",
+            "period": "Jul 2025 - Sep 2025",
+            "description": "Guided 47 participants overall, successfully mentoring 1 to the Ultimate Milestone, 1 to the Third Milestone, and 4 to the First Milestone.",
+            "type": "work"
+        },
+        {
+            "org": "HMIF FT-UNRAM",
+            "role": "WINIT: Young Entrepreneur Programmer",
+            "period": "May 2025 - Jul 2025",
+            "description": "Participated in the WINIT entrepreneurship program, building business-focused web development projects.",
+            "type": "org"
+        },
+        {
+            "org": "Coding Camp powered by DBS Foundation",
+            "role": "Machine Learning Cohort (Progressive)",
+            "period": "Feb 2025 - Sep 2025",
+            "description": "Completed extensive machine learning training focused on core AI models, neural networks, and applications.",
+            "type": "work"
+        },
+        {
+            "org": "HMIF FT-UNRAM",
+            "role": "Member & LinkedIn Page Manager",
+            "period": "Feb 2025 - Present",
+            "description": "Serving as an active member of the Informatics Student Association and managing the official LinkedIn page to enhance digital outreach.",
+            "type": "org"
+        },
+        {
+            "org": "Genesis of Technology (GTECHRESMAN)",
+            "role": "Member & Ex-Vice President",
+            "period": "Aug 2021 - Apr 2024",
+            "description": "Promoted technical initiatives across Bali schools, coordinated organization systems, and designed RVDiA Discord bot serving 30k+ users.",
+            "type": "org"
+        },
+        {
+            "org": "Genesis of Technology (GTECHRESMAN)",
+            "role": "Ephotech 2022 & 2023 Olympiad Committee",
+            "period": "Jul 2022 - Oct 2023",
+            "description": "Created quizzes and provided core technical coordination for high-school Microsoft Excel Olympiads.",
+            "type": "org"
+        }
+    ],
+    "education": [
+        {
+            "university": "University of Mataram",
+            "degree": "Bachelor of Informatics Engineering",
+            "field": "Informatics Engineering (Teknik Informatika)",
+            "period": "Aug 2024 - Jun 2028",
+            "gpa": "4.00/4.00 (4th Semester, International Class)"
+        },
+        {
+            "university": "University of Pennsylvania",
+            "degree": "Penn Engineering (Online)",
+            "field": "Computational Thinking for Problem Solving",
+            "period": "Sep 2024 - Oct 2024",
+            "gpa": "96.47/100"
+        },
+        {
+            "university": "SMA Negeri 2 Denpasar",
+            "degree": "High School Diploma",
+            "field": "Science (IPA)",
+            "period": "Jul 2021 - Apr 2024",
+            "gpa": "96.7/100 (#2, G-Tech Resman, Ephotech Committee)"
+        },
+        {
+            "university": "SMP Kristen 1 Harapan Denpasar",
+            "degree": "Junior High School Diploma",
+            "field": "General Studies",
+            "period": "Jan 2019 - May 2021",
+            "gpa": "96.3/100 (#2, English Club Speech Div & Tabuh Harapan)"
+        }
+    ],
+    "competitions": [
+        {
+            "name": "\ud83c\udfc6 | TechSprint Innovation Cup Web Developer Competition",
+            "year": 2026,
+            "result": "Attained 48th / 112th place with 3Dex",
+            "organizer": "CodeLab Indonesia"
+        },
+        {
+            "name": "\ud83c\udfc6 | MCF ITB Data Science Competition",
+            "year": 2026,
+            "result": "Ranked #61 out of 329 teams (14% MAPE)",
+            "organizer": "Institut Teknologi Bandung (ITB)"
+        },
+        {
+            "name": "\ud83c\udfc6 | #JuaraGCP Season 12 Tier 3 Winner",
+            "year": 2026,
+            "result": "Rank 271 out of 10000+ competitors",
+            "organizer": "Google Developers Indonesia"
+        },
+        {
+            "name": "\ud83d\udcb0 | PPBRI Scholarship Ganjil 2025-2026",
+            "year": 2025,
+            "result": "Scholarship Awardee (4.0 GPA)",
+            "organizer": "Bank Rakyat Indonesia (BRI)"
+        },
+        {
+            "name": "\ud83e\udd48 | 2nd Runner Up & Bronze Award Pesta Data Nasional (PeDaS)",
+            "year": 2025,
+            "result": "Time Series Forecasting: Indonesian Automotives",
+            "organizer": "APTIKOM"
+        },
+        {
+            "name": "\ud83c\udfc6 | #JuaraGCP Season 11 Tier 2 Winner",
+            "year": 2025,
+            "result": "Tier 2 Winner (Top 1000)",
+            "organizer": "Google Developers Indonesia"
+        },
+        {
+            "name": "\ud83d\udcb0 | PPBRI Scholarship Genap 2024-2025",
+            "year": 2025,
+            "result": "Scholarship Awardee (4.0 GPA)",
+            "organizer": "Bank Rakyat Indonesia (BRI)"
+        },
+        {
+            "name": "\ud83d\udc65 | Ephotech IT Olympiad",
+            "year": 2023,
+            "result": "Committee Member",
+            "organizer": "G-Tech Resman"
+        }
+    ],
+    "certifications": [
+        {
+            "name": "AI Ready ASEAN Youth Challenge Participant",
+            "issuer": "AI Singapore",
+            "date": "May 2026",
+            "url": "https://credentials.ap.ai/00292889-e41b-4167-b535-8ec05213c063"
+        },
+        {
+            "name": "MCF ITB 2026 Data Science Participant",
+            "issuer": "Institut Teknologi Bandung",
+            "date": "Feb 2026",
+            "url": ""
+        },
+        {
+            "name": "Best Project #3 Web Developer",
+            "issuer": "HMIF FT-UNRAM",
+            "date": "Oct 2025",
+            "url": ""
+        },
+        {
+            "name": "Digital Systems Assistant Lecturer",
+            "issuer": "University of Mataram",
+            "date": "Jan 2026",
+            "url": ""
+        },
+        {
+            "name": "Java Masterclass 2025",
+            "issuer": "Udemy",
+            "date": "Jan 2026",
+            "url": "https://www.udemy.com/certificate/UC-e9324faf-5aa4-4fe6-a531-79c7b9119402"
+        },
+        {
+            "name": "2nd Runner Up Pesta Data Nasional 2025",
+            "issuer": "APTIKOM",
+            "date": "Oct 2025",
+            "url": ""
+        },
+        {
+            "name": "Google Cloud Arcade Facilitator Indonesia 2025",
+            "issuer": "Google Cloud Arcade Facilitator Program",
+            "date": "Oct 2025",
+            "url": ""
+        },
+        {
+            "name": "Bronze Award Pesta Data Nasional",
+            "issuer": "APTIKOM",
+            "date": "Sep 2025",
+            "url": ""
+        },
+        {
+            "name": "WINIT: Young Entrepreneur Programmer",
+            "issuer": "Unram S-Cube Center",
+            "date": "Sep 2025",
+            "url": ""
+        },
+        {
+            "name": "Cloud Technical Series - AI Agents",
+            "issuer": "Google Cloud Asia Pacific",
+            "date": "Aug 2025",
+            "url": ""
+        },
+        {
+            "name": "Java Intermediate",
+            "issuer": "Sololearn",
+            "date": "Aug 2025",
+            "url": "https://www.sololearn.com/certificates/CC-VLBAAZAQ"
+        },
+        {
+            "name": "Uji Kemahiran Berbahasa Indonesia (UKBI)",
+            "issuer": "Kementerian Pendidikan dan Kebudayaan (Ministry of Education and Culture Republic of Indonesia)",
+            "date": "Jul 2025",
+            "url": ""
+        },
+        {
+            "name": "GenAI Job Simulation",
+            "issuer": "BCG X",
+            "date": "Jul 2025",
+            "url": "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/BCG%20X/eRs7KQWKYLWZZeHW3_BCG%20X_completion_certificate.pdf"
+        },
+        {
+            "name": "ITCC 2023 LCC Participant",
+            "issuer": "Himpunan Mahasiswa Teknologi Informasi Universitas Udayana",
+            "date": "Nov 2023",
+            "url": ""
+        },
+        {
+            "name": "Innovation Lab: Olivia and Gemastik 2025",
+            "issuer": "Universitas Negeri Surabaya",
+            "date": "Jun 2025",
+            "url": ""
+        },
+        {
+            "name": "DevOps (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Apr 2025",
+            "url": "https://www.dicoding.com/certificates/72ZD5RGL6ZYW"
+        },
+        {
+            "name": "Develop GenAI Apps with Gemini and Streamlit",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/1a9278bf-f89d-4994-83ac-d431a42875d9"
+        },
+        {
+            "name": "Use Machine Learning APIs on Google Cloud",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/3fbfc132-9217-425e-a6b4-488ee86fbe85"
+        },
+        {
+            "name": "Data Visualization with Looker Data Studio",
+            "issuer": "MySkill",
+            "date": "Feb 2025",
+            "url": ""
+        },
+        {
+            "name": "Build and Deploy Machine Learning Solutions on Vertex AI",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/43854e75-457c-45e3-ae5d-4a563532710f"
+        },
+        {
+            "name": "Explore Generative AI with the Vertex AI Gemini API",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/7914e545-1c95-4964-b51c-2047b35a4c82"
+        },
+        {
+            "name": "The Basics of Google Cloud Compute",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/8f8ce881-505e-4ce9-a483-8efdcfb37001"
+        },
+        {
+            "name": "Build Real World AI Applications with Gemini and Imagen",
+            "issuer": "Google Cloud Skills Boost",
+            "date": "Feb 2025",
+            "url": "https://www.cloudskillsboost.google/public_profiles/a0d5a377-8e85-429b-ab99-d4ac9611ab7e"
+        },
+        {
+            "name": "The Python Programmer 2025",
+            "issuer": "Udemy",
+            "date": "Jan 2025",
+            "url": "https://www.udemy.com/certificate/UC-6bcfe096-ded0-413a-8c27-e5273c802f68"
+        },
+        {
+            "name": "Beginning C++ Programming - From Beginner to Beyond",
+            "issuer": "Udemy",
+            "date": "Jan 2025",
+            "url": "https://www.udemy.com/certificate/UC-1cdabaa2-e739-4593-b2cc-68b18094b3a4"
+        },
+        {
+            "name": "Python Introduction for Data Analysis",
+            "issuer": "MySkill",
+            "date": "Jan 2025",
+            "url": ""
+        },
+        {
+            "name": "Machine Learning (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Jan 2025",
+            "url": "https://www.dicoding.com/certificates/GRX53G36YZ0M"
+        },
+        {
+            "name": "Python Intermediate",
+            "issuer": "Sololearn",
+            "date": "Aug 2024",
+            "url": "https://www.sololearn.com/certificates/CC-7W93WCYQ"
+        },
+        {
+            "name": "Python (Basic)",
+            "issuer": "HackerRank",
+            "date": "Jan 2025",
+            "url": "https://www.hackerrank.com/certificates/e85b3a5c1ea9"
+        },
+        {
+            "name": "Python Programming (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Oct 2024",
+            "url": "https://www.dicoding.com/certificates/0LZ0424WRP65"
+        },
+        {
+            "name": "Data Visualization (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Oct 2024",
+            "url": "https://www.dicoding.com/certificates/KEXLY80QMZG2"
+        },
+        {
+            "name": "Computational Thinking for Problem Solving",
+            "issuer": "University of Pennsylvania",
+            "date": "Sep 2024",
+            "url": "https://www.coursera.org/account/accomplishments/verify/K49ASM8ARWBO"
+        },
+        {
+            "name": "Structured Query Language SQL (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Aug 2024",
+            "url": "https://www.dicoding.com/certificates/2VX3R3GNNZYQ"
+        },
+        {
+            "name": "Data Science (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Aug 2024",
+            "url": "https://www.dicoding.com/certificates/0LZ0687KRZ65"
+        },
+        {
+            "name": "UMEPT",
+            "issuer": "University of Mataram",
+            "date": "Jul 2024",
+            "url": ""
+        },
+        {
+            "name": "Artificial Intelligence (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Aug 2024",
+            "url": "https://www.dicoding.com/certificates/4EXGQ2VGQZRL"
+        },
+        {
+            "name": "Project Management (Basic)",
+            "issuer": "Dicoding Indonesia",
+            "date": "Aug 2024",
+            "url": "https://www.dicoding.com/certificates/NVP7QV4LRZR0"
+        },
+        {
+            "name": "C++ Intermediate",
+            "issuer": "Sololearn",
+            "date": "Aug 2024",
+            "url": "https://www.sololearn.com/certificates/CC-4HQ1YXSJ"
+        },
+        {
+            "name": "Python Developer",
+            "issuer": "Sololearn",
+            "date": "Aug 2024",
+            "url": "https://www.sololearn.com/certificates/CC-OMHMNMVS"
+        },
+        {
+            "name": "Verified Bot Developer",
+            "issuer": "Discord",
+            "date": "Aug 2023",
+            "url": ""
+        }
+    ],
+    "target_roles": [
+        {
+            "title": "Cloud Engineer",
+            "description": "Designing and maintaining scalable cloud infrastructure across GCP and other major platforms."
+        },
+        {
+            "title": "DevOps Engineer",
+            "description": "Building CI/CD pipelines, container orchestration, and automating everything that can be automated."
+        },
+        {
+            "title": "Backend Developer",
+            "description": "Architecting reliable, high-performance APIs and backend systems in Python, TypeScript, or Java."
+        },
+        {
+            "title": "Platform Engineer",
+            "description": "Building the internal tooling and platforms that make other engineers more productive."
+        }
+    ],
+    "future_vision": {
+        "statement": "I want to build systems that outlast me. Infrastructure that quietly does its job for years. Software that solves real problems cleanly. I am most drawn to the invisible machinery of the internet, the layers most people never think about but rely on every second.",
+        "goals": [
+            "Contribute to a large-scale distributed system in production",
+            "Architect cloud infrastructure for a meaningful product",
+            "Publish at least one open-source tool that people actually use",
+            "Keep learning, keep competing, keep building"
+        ]
+    },
+    "blog_posts": [],
+    "social_links": [
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/Schryzon",
+            "label": "github.com/Schryzon"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "https://linkedin.com/in/schryzon",
+            "label": "linkedin.com/in/schryzon"
+        },
+        {
+            "platform": "Google Dev",
+            "url": "https://g.dev/Jayananda",
+            "label": "g.dev/Jayananda"
+        },
+        {
+            "platform": "Discord Bot",
+            "url": "https://top.gg/bot/957471338577166417",
+            "label": "RVDiA on Top.gg"
+        }
+    ]
+}
