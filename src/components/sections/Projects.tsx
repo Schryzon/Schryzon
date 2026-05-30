@@ -17,6 +17,7 @@ interface GitHubRepo {
     forks_count: number
     language: string | null
     topics: string[]
+    is_fallback?: boolean
 }
 
 const LANG_COLORS: Record<string, string> = {
@@ -35,26 +36,56 @@ const LANG_COLORS: Record<string, string> = {
 export default function Projects({ featured }: ProjectsProps) {
     const [repos, set_repos] = useState<GitHubRepo[]>([])
     const [loading, set_loading] = useState(true)
-    const [error, set_error] = useState(false)
 
     useEffect(() => {
-        const featured_names = featured.map(f => f.repo)
-
         Promise.all(
-            featured_names.map(name =>
-                fetch(`https://api.github.com/repos/Schryzon/${name}`, {
+            featured.map(f =>
+                fetch(`https://api.github.com/repos/Schryzon/${f.repo}`, {
                     headers: { Accept: 'application/vnd.github+json' },
                 })
                     .then(r => (r.ok ? r.json() : null))
                     .catch(() => null)
+                    .then(data => {
+                        if (data) {
+                            return {
+                                ...data,
+                                is_fallback: false
+                            } as GitHubRepo
+                        } else {
+                            // construct fallback object from local data if api rate limited or offline
+                            return {
+                                name: f.repo,
+                                description: f.description_override || null,
+                                html_url: `https://github.com/Schryzon/${f.repo}`,
+                                homepage: null,
+                                stargazers_count: 0,
+                                forks_count: 0,
+                                language: f.tags[0] || null,
+                                topics: f.tags,
+                                is_fallback: true
+                            } as GitHubRepo
+                        }
+                    })
             )
         )
             .then(results => {
-                set_repos(results.filter(Boolean) as GitHubRepo[])
+                set_repos(results as GitHubRepo[])
                 set_loading(false)
             })
             .catch(() => {
-                set_error(true)
+                // compile static fallbacks for all repositories if promise fails
+                const fallbacks = featured.map(f => ({
+                    name: f.repo,
+                    description: f.description_override || null,
+                    html_url: `https://github.com/Schryzon/${f.repo}`,
+                    homepage: null,
+                    stargazers_count: 0,
+                    forks_count: 0,
+                    language: f.tags[0] || null,
+                    topics: f.tags,
+                    is_fallback: true
+                }))
+                set_repos(fallbacks)
                 set_loading(false)
             })
     }, [featured])
@@ -83,13 +114,7 @@ export default function Projects({ featured }: ProjectsProps) {
                     </div>
                 )}
 
-                {error && (
-                    <div className="projects-error">
-                        <span>Could not reach GitHub API. Try refreshing.</span>
-                    </div>
-                )}
-
-                {!loading && !error && (
+                {!loading && (
                     <div className="projects-grid">
                         {repos.map((repo, i) => (
                             <ScrollReveal key={repo.name} delay={i * 0.08}>
@@ -140,16 +165,18 @@ export default function Projects({ featured }: ProjectsProps) {
                                                 {repo.language}
                                             </div>
                                         )}
-                                        <div className="project-stats">
-                                            <div className="project-stat">
-                                                <Star size={13} />
-                                                {repo.stargazers_count}
+                                        {!repo.is_fallback && (
+                                            <div className="project-stats">
+                                                <div className="project-stat">
+                                                    <Star size={13} />
+                                                    {repo.stargazers_count}
+                                                </div>
+                                                <div className="project-stat">
+                                                    <GitFork size={13} />
+                                                    {repo.forks_count}
+                                                </div>
                                             </div>
-                                            <div className="project-stat">
-                                                <GitFork size={13} />
-                                                {repo.forks_count}
-                                            </div>
-                                        </div>
+                                        )}
                                     </div>
                                 </article>
                             </ScrollReveal>
