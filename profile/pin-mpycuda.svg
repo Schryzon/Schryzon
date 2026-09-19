@@ -21,12 +21,28 @@
             .header { font-size: 15.5px; }
           }
           
-    .description { font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif; fill: #CDD6F4 }
+    .description {
+      font: 400 13px 'Segoe UI', Ubuntu, Sans-Serif;fill: #CDD6F4;
+      
+    }
     .gray { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #CDD6F4 }
-    .icon { fill: #b27ae4 }
     .badge { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; }
-    .badge rect { opacity: 0.2 }
+    .badge rect { opacity: 0.2; stroke: #CDD6F4 }
+    .badge text { fill: #CDD6F4 }
+
+    .stat { font: 400 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #CDD6F4 }
+    .stagger {
+      opacity: 0;
+      animation: fadeInAnimation 0.3s ease-in-out forwards;
+    }
+    .not_bold { font-weight: 400 }
+    .bold { font-weight: 700 }
+    .icon {
+      fill: #b27ae4;
+      display: block;
+    }
   
+          
 
           
       /* Animations */
@@ -51,9 +67,15 @@
         </style>
 
         
+        <defs>
+          
+          
+        </defs>
+        
 
         <rect
           data-testid="card-bg"
+          class="card-bg"
           x="0.5"
           y="0.5"
           rx="4.5"
@@ -99,8 +121,8 @@
           
     
 
-    <text class="description" x="25" y="-5">
-      <tspan dy="1.2em" x="25">Personal Projects utilizing MPI and CUDA</tspan>
+    <text class="description" x="25" y="-5"> 
+      <tspan dy="1.2em" x="25">Personal Projects utilizing MPI, Apache Spark, and CUDA</tspan>
     </text>
 
     <g transform="translate(30, 45)">
@@ -109,7 +131,7 @@
       <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#DA5B0B" />
       <text data-testid="lang-name" class="gray" x="15">Jupyter Notebook</text>
     </g>
-    </g><g transform="translate(118.9, 0)"><g transform="translate(0, 0)">
+    </g><g transform="translate(120.19999933242796, 0)"><g transform="translate(0, 0)">
       <svg
         class="icon"
         y="-12"
@@ -122,6 +144,11 @@
       </svg>
     </g><g transform="translate(20, 0)"><text data-testid="stargazers" class="gray">1</text></g></g>
     </g>
+    
+  <svg x="0" y="0"><g transform="translate(-3, 68)">
+      
+    </g></svg>
+    
   
         </g>
       </svg>
