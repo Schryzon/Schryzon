@@ -147,7 +147,7 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
 
 This repository contains the source code for my premium, dark-purple glassmorphic portfolio site!
 
-* **Live Site**: [schryzon.github.io](https://schryzon.github.io)
+* **Live Site**: [schryzon.github.io/Schryzon](https://schryzon.github.io/Schryzon)
 
 ---
 
