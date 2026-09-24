@@ -17,6 +17,7 @@ interface GitHubRepo {
     forks_count: number
     language: string | null
     topics: string[]
+    image_url?: string
     is_fallback?: boolean
 }
 
@@ -36,11 +37,14 @@ const LANG_COLORS: Record<string, string> = {
 export default function Projects({ featured }: ProjectsProps) {
     const [repos, set_repos] = useState<GitHubRepo[]>([])
     const [loading, set_loading] = useState(true)
+    const [modal_image, set_modal_image] = useState<{ title: string; url: string } | null>(null)
 
     useEffect(() => {
         Promise.all(
-            featured.map(f =>
-                fetch(`https://api.github.com/repos/Schryzon/${f.repo}`, {
+            featured.map(f => {
+                const repo_path = f.repo.includes('/') ? f.repo : `Schryzon/${f.repo}`
+                const preview_url = f.image_url || `https://opengraph.githubassets.com/1/${repo_path}`
+                return fetch(`https://api.github.com/repos/${repo_path}`, {
                     headers: { Accept: 'application/vnd.github+json' },
                 })
                     .then(r => (r.ok ? r.json() : null))
@@ -49,24 +53,26 @@ export default function Projects({ featured }: ProjectsProps) {
                         if (data) {
                             return {
                                 ...data,
+                                image_url: preview_url,
                                 is_fallback: false
                             } as GitHubRepo
                         } else {
                             // construct fallback object from local data if api rate limited or offline
                             return {
-                                name: f.repo,
+                                name: f.repo.includes('/') ? f.repo.split('/')[1] : f.repo,
                                 description: f.description_override || null,
-                                html_url: `https://github.com/Schryzon/${f.repo}`,
+                                html_url: `https://github.com/${repo_path}`,
                                 homepage: null,
                                 stargazers_count: 0,
                                 forks_count: 0,
                                 language: f.tags[0] || null,
                                 topics: f.tags,
+                                image_url: preview_url,
                                 is_fallback: true
                             } as GitHubRepo
                         }
                     })
-            )
+            })
         )
             .then(results => {
                 set_repos(results as GitHubRepo[])
@@ -74,17 +80,21 @@ export default function Projects({ featured }: ProjectsProps) {
             })
             .catch(() => {
                 // compile static fallbacks for all repositories if promise fails
-                const fallbacks = featured.map(f => ({
-                    name: f.repo,
-                    description: f.description_override || null,
-                    html_url: `https://github.com/Schryzon/${f.repo}`,
-                    homepage: null,
-                    stargazers_count: 0,
-                    forks_count: 0,
-                    language: f.tags[0] || null,
-                    topics: f.tags,
-                    is_fallback: true
-                }))
+                const fallbacks = featured.map(f => {
+                    const repo_path = f.repo.includes('/') ? f.repo : `Schryzon/${f.repo}`
+                    return {
+                        name: f.repo.includes('/') ? f.repo.split('/')[1] : f.repo,
+                        description: f.description_override || null,
+                        html_url: `https://github.com/${repo_path}`,
+                        homepage: null,
+                        stargazers_count: 0,
+                        forks_count: 0,
+                        language: f.tags[0] || null,
+                        topics: f.tags,
+                        image_url: f.image_url || `https://opengraph.githubassets.com/1/${repo_path}`,
+                        is_fallback: true
+                    }
+                })
                 set_repos(fallbacks)
                 set_loading(false)
             })
@@ -228,6 +238,26 @@ export default function Projects({ featured }: ProjectsProps) {
                                 {filtered_repos.map((repo, i) => (
                                     <ScrollReveal key={repo.name} delay={i * 0.08}>
                                         <article className="glass-card project-card">
+                                            {repo.image_url && (
+                                                <div
+                                                    className="project-media-banner"
+                                                    onClick={() => set_modal_image({ title: repo.name, url: repo.image_url! })}
+                                                    role="button"
+                                                    tabIndex={0}
+                                                    onKeyDown={e => { if (e.key === 'Enter') set_modal_image({ title: repo.name, url: repo.image_url! }) }}
+                                                >
+                                                    <img
+                                                        src={repo.image_url}
+                                                        alt={`${repo.name} media preview`}
+                                                        loading="lazy"
+                                                        onError={(e) => { (e.currentTarget.parentElement as HTMLElement).style.display = 'none'; }}
+                                                    />
+                                                    <div className="project-media-overlay">
+                                                        <span>&oplus; Preview Media</span>
+                                                    </div>
+                                                </div>
+                                            )}
+
                                             <div className="project-header">
                                                 <div className="project-name">{repo.name}</div>
                                                 <div className="project-links">
@@ -309,6 +339,33 @@ export default function Projects({ featured }: ProjectsProps) {
                     </div>
                 </ScrollReveal>
             </div>
+
+            {/* Modal Lightbox for Media Preview */}
+            {modal_image && (
+                <div
+                    className="media-modal-backdrop"
+                    onClick={() => set_modal_image(null)}
+                >
+                    <div
+                        className="media-modal-content"
+                        onClick={e => e.stopPropagation()}
+                    >
+                        <div className="media-modal-header">
+                            <span className="media-modal-title">{modal_image.title} &mdash; Media Preview</span>
+                            <button
+                                className="media-modal-close"
+                                onClick={() => set_modal_image(null)}
+                                aria-label="Close media preview"
+                            >
+                                &times;
+                            </button>
+                        </div>
+                        <div className="media-modal-body">
+                            <img src={modal_image.url} alt={`${modal_image.title} preview`} />
+                        </div>
+                    </div>
+                </div>
+            )}
         </section>
     )
 }

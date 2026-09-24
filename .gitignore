@@ -25,3 +25,9 @@ dist-ssr
 
 linkedin-data/
 scratch/
+.env
+.env.*
+!.env.example
+AGENTS.md
+__pycache__/
+*.py[cod]

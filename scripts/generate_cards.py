@@ -8,12 +8,12 @@ GITHUB_USERNAME = "Schryzon"
 PROFILE_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "profile")
 
 PINNED_REPOS = [
-    {"repo": "yomu", "filename": "pin-yomu.svg"},
-    {"repo": "RVDiA", "filename": "pin-rvdia.svg"},
-    {"repo": "NetTracer", "filename": "pin-nettracer.svg"},
-    {"repo": "3Dex", "filename": "pin-3dex.svg"},
-    {"repo": "XFFS", "filename": "pin-xffs.svg"},
-    {"repo": "mpyCUDA", "filename": "pin-mpycuda.svg"},
+    {"owner": "sal063", "repo": "AC6_recomp", "filename": "pin-ac6-recomp.svg", "show_owner": True},
+    {"owner": "mlafeldt", "repo": "cb2util", "filename": "pin-cb2util.svg", "show_owner": True},
+    {"owner": "Schryzon", "repo": "RVDiA", "filename": "pin-rvdia.svg", "show_owner": False},
+    {"owner": "Schryzon", "repo": "NetTracer", "filename": "pin-nettracer.svg", "show_owner": False},
+    {"owner": "Schryzon", "repo": "3Dex", "filename": "pin-3dex.svg", "show_owner": False},
+    {"owner": "Schryzon", "repo": "pktforge", "filename": "pin-pktforge.svg", "show_owner": False},
 ]
 
 ERROR_PATTERNS = [
@@ -73,6 +73,72 @@ def get_gh_token() -> str:
         return ""
 
 
+import json
+import argparse
+
+
+class Card_Generator:
+    def __init__(self, target_dir: str, token: str):
+        self.target_dir = target_dir
+        self.token = token
+
+    def generate_all(self) -> bool:
+        print(f"\n--- GENERATING PINNED CARDS TO: {self.target_dir} ---")
+        if not self.token:
+            print("[ERROR] Cannot generate cards without GitHub token.")
+            return False
+
+        js_script = """
+import { pathToFileURL } from 'node:url';
+import { writeFile, mkdir } from 'node:fs/promises';
+import path from 'node:path';
+
+const corePath = pathToFileURL(process.env.TEMP + '/grs-test/node_modules/@stats-organization/github-readme-stats-core/build/index.js').href;
+const { pin } = await import(corePath);
+
+const repos = JSON.parse(process.env.REPOS_JSON || '[]');
+const targetDir = process.env.TARGET_DIR;
+
+await mkdir(targetDir, { recursive: true });
+
+for (const r of repos) {
+    const opts = {
+        username: r.owner,
+        repo: r.repo,
+        theme: 'tokyonight',
+        bg_color: '1E1E2E',
+        hide_border: 'true',
+        title_color: 'b27ae4',
+        icon_color: 'b27ae4',
+        text_color: 'CDD6F4'
+    };
+    if (r.show_owner) {
+        opts.show_owner = 'true';
+    }
+    const res = await pin(opts);
+    if (res?.status?.startsWith('error')) {
+        console.error(`[ERROR] ${r.owner}/${r.repo}:`, res.error);
+        process.exit(1);
+    }
+    const outPath = path.join(targetDir, r.filename);
+    await writeFile(outPath, res.content, 'utf8');
+    console.log(`[GENERATED] ${r.filename} (${res.content.length} bytes)`);
+}
+"""
+        env = os.environ.copy()
+        env["PAT_1"] = self.token
+        env["TARGET_DIR"] = self.target_dir
+        env["REPOS_JSON"] = json.dumps(PINNED_REPOS)
+
+        res = subprocess.run(["node", "--input-type=module", "-e", js_script], env=env, capture_output=True, text=True)
+        if res.returncode != 0:
+            print(f"[FAIL] Card generation failed:\n{res.stderr}")
+            return False
+
+        print(res.stdout.strip())
+        return True
+
+
 def check_repos_health(token: str):
     print(f"\n--- CHECKING PINNED REPOSITORIES ACCESSIBILITY ---")
     headers = {"Accept": "application/vnd.github.v3+json"}
@@ -80,28 +146,41 @@ def check_repos_health(token: str):
         headers["Authorization"] = f"token {token}"
 
     for item in PINNED_REPOS:
+        owner = item.get("owner", GITHUB_USERNAME)
         repo_name = item["repo"]
-        url = f"https://api.github.com/repos/{GITHUB_USERNAME}/{repo_name}"
+        url = f"https://api.github.com/repos/{owner}/{repo_name}"
         resp = requests.get(url, headers=headers)
         if resp.status_code == 200:
             data = resp.json()
             stars = data.get("stargazers_count", 0)
             lang = data.get("language", "Unknown")
-            print(f"[OK] {GITHUB_USERNAME}/{repo_name} | Language: {lang} | Stars: {stars}")
+            print(f"[OK] {owner}/{repo_name} | Language: {lang} | Stars: {stars}")
         else:
-            print(f"[FAIL] {GITHUB_USERNAME}/{repo_name} -> HTTP {resp.status_code}: {resp.text[:100]}")
+            print(f"[FAIL] {owner}/{repo_name} -> HTTP {resp.status_code}: {resp.text[:100]}")
 
 
 def main():
-    validator = Card_Validator(PROFILE_DIR)
-    is_healthy = validator.validate_all()
+    parser = argparse.ArgumentParser(description="GitHub Profile pinned card manager and validator.")
+    parser.add_argument("--generate", action="store_true", help="Generate SVG cards locally using GitHub API token")
+    args = parser.parse_args()
 
     token = get_gh_token()
     if token:
         print(f"\n[INFO] Authenticated GitHub token detected via environment or 'gh' CLI.")
-        check_repos_health(token)
     else:
         print("\n[WARN] No GitHub token found. Set GH_PAT or ensure 'gh' is logged in.")
+
+    if args.generate:
+        generator = Card_Generator(PROFILE_DIR, token)
+        success = generator.generate_all()
+        if not success:
+            sys.exit(1)
+
+    validator = Card_Validator(PROFILE_DIR)
+    is_healthy = validator.validate_all()
+
+    if token:
+        check_repos_health(token)
 
     if not is_healthy:
         print("\n[ERROR] One or more profile cards are corrupted with error responses!")

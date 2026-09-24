@@ -109,7 +109,7 @@
         y="0"
         class="header"
         data-testid="header"
-      >XFFS</text>
+      >pktforge</text>
     </g>
       </g>
     
@@ -122,16 +122,16 @@
     
 
     <text class="description" x="25" y="-5"> 
-      <tspan dy="1.2em" x="25">A teaching-oriented user-space filesystem with bitmap</tspan><tspan dy="1.2em" x="25">allocation and inode design.</tspan>
+      <tspan dy="1.2em" x="25">Packet Tracer 7 file decoder and study helper for&#160;.pkt&#160;and</tspan><tspan dy="1.2em" x="25">.pka&#160;files.</tspan>
     </text>
 
     <g transform="translate(30, 65)">
       <g transform="translate(0, 0)">
     <g data-testid="primary-lang">
-      <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#f34b7d" />
-      <text data-testid="lang-name" class="gray" x="15">C++</text>
+      <circle data-testid="lang-color" cx="0" cy="-5" r="6" fill="#555555" />
+      <text data-testid="lang-name" class="gray" x="15">C</text>
     </g>
-    </g><g transform="translate(48.82000045776367, 0)"><g transform="translate(0, 0)">
+    </g><g transform="translate(32.420000076293945, 0)"><g transform="translate(0, 0)">
       <svg
         class="icon"
         y="-12"

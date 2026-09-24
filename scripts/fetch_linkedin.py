@@ -29,33 +29,42 @@ class Linkedin_Fetcher:
         self._setup_session()
 
     def _setup_session(self):
+        clean_csrf = self.csrf_token.strip("\"' \r\n")
         cookies = {
             "li_at": self.li_at_cookie,
-            "JSESSIONID": f'"{self.csrf_token}"' if not self.csrf_token.startswith('"') else self.csrf_token,
+            "JSESSIONID": f'"{clean_csrf}"',
         }
         for name, val in cookies.items():
             self.session.cookies.set(name, val, domain=".linkedin.com")
 
-        clean_csrf = self.csrf_token.strip('"')
         self.session.headers.update(DEFAULT_HEADERS)
         self.session.headers.update({"csrf-token": clean_csrf})
 
     def fetch_endpoint(self, endpoint_url: str) -> Optional[Dict[str, Any]]:
-        response = self.session.get(endpoint_url, timeout=15)
-        if response.status_code == 200:
-            return response.json()
+        try:
+            response = self.session.get(endpoint_url, allow_redirects=False, timeout=15)
+            if response.status_code == 200:
+                return response.json()
 
-        print(f"[WARN] Failed fetching {endpoint_url} (HTTP {response.status_code}): {response.text[:120]}")
-        return None
+            if response.status_code in (301, 302, 303, 307):
+                print(f"[ERROR] Session expired or invalid 'li_at' cookie (redirected to: {response.headers.get('Location')})")
+                return None
+
+            print(f"[WARN] Failed fetching {endpoint_url} (HTTP {response.status_code}): {response.text[:120]}")
+            return None
+        except Exception as e:
+            print(f"[ERROR] Network error fetching {endpoint_url}: {e}")
+            return None
 
     def fetch_full_profile(self, username: str) -> Dict[str, Any]:
         endpoints = {
-            "profile_view": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/profileView",
+            "profile": f"{VOYAGER_BASE_URL}/identity/dash/profiles?q=memberIdentity&memberIdentity={username}",
             "positions": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/positionGroups?count=100",
+            "volunteering": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/volunteerExperiences?count=100",
             "certifications": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/certifications?count=100",
+            "projects": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/projects?count=100",
             "educations": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/educations?count=100",
             "skills": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/skills?count=100",
-            "projects": f"{VOYAGER_BASE_URL}/identity/profiles/{username}/projects?count=100",
         }
 
         results: Dict[str, Any] = {}
@@ -325,88 +334,239 @@ class Offline_Html_Parser:
         return honors
 
 
+def get_vector_image_url(logo_dict: Optional[Dict[str, Any]]) -> Optional[str]:
+    if not logo_dict or not isinstance(logo_dict, dict):
+        return None
+    root_url = logo_dict.get("rootUrl", "")
+    artifacts = logo_dict.get("artifacts", [])
+    if not root_url or not artifacts:
+        return None
+    best_artifact = max(artifacts, key=lambda a: a.get("width", 0), default=None)
+    if best_artifact and best_artifact.get("fileIdentifyingUrlPathSegment"):
+        return f"{root_url}{best_artifact['fileIdentifyingUrlPathSegment']}"
+    return None
+
+
 class Profile_Normalizer:
     @staticmethod
-    def normalize_voyager_data(raw_data: Dict[str, Any]) -> Dict[str, Any]:
+    def normalize_voyager_data(raw_data: Dict[str, Any], offline_data: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        offline = offline_data or {}
         normalized = {
             "profile": {},
             "certifications": [],
             "positions": [],
-            "education": [],
-            "skills": [],
+            "volunteering": [],
+            "education": offline.get("education", []),
+            "skills": offline.get("skills", []),
             "projects": [],
+            "honors": offline.get("honors", []),
         }
 
-        # Extract profile header
-        profile_view = raw_data.get("profile_view", {})
-        if profile_view:
-            profile_elem = profile_view.get("profile", {})
+        # Build MiniCompany lookup map for logos
+        company_map: Dict[str, Dict[str, str]] = {}
+        for section_key in ("positions", "volunteering", "certifications"):
+            for item in raw_data.get(section_key, {}).get("included", []):
+                if item.get("$type") == "com.linkedin.voyager.entities.shared.MiniCompany":
+                    urn = item.get("entityUrn") or item.get("objectUrn")
+                    if urn:
+                        company_map[urn] = {
+                            "name": item.get("name", ""),
+                            "logo_url": get_vector_image_url(item.get("logo")) or "",
+                        }
+
+        # 1. Profile header (from dash profiles or legacy profile_view)
+        dash_profile = raw_data.get("profile", {})
+        if dash_profile:
+            for item in dash_profile.get("included", []):
+                if "Profile" in item.get("$type", ""):
+                    normalized["profile"] = {
+                        "first_name": item.get("firstName", ""),
+                        "last_name": item.get("lastName", ""),
+                        "headline": item.get("headline", ""),
+                        "summary": item.get("summary", ""),
+                        "location": item.get("locationName", "") or item.get("geoRegion", ""),
+                        "urn": item.get("entityUrn", ""),
+                    }
+                    break
+
+        if not normalized["profile"] and raw_data.get("profile_view"):
+            elem = raw_data["profile_view"].get("profile", {})
             normalized["profile"] = {
-                "first_name": profile_elem.get("firstName", ""),
-                "last_name": profile_elem.get("lastName", ""),
-                "headline": profile_elem.get("headline", ""),
-                "summary": profile_elem.get("summary", ""),
-                "location": profile_elem.get("locationName", ""),
+                "first_name": elem.get("firstName", ""),
+                "last_name": elem.get("lastName", ""),
+                "headline": elem.get("headline", ""),
+                "summary": elem.get("summary", ""),
+                "location": elem.get("locationName", ""),
             }
 
-        # Extract certifications
-        certs_raw = raw_data.get("certifications", {}).get("elements", [])
-        for cert in certs_raw:
-            normalized["certifications"].append({
-                "name": cert.get("name", ""),
-                "issuer": cert.get("authority", ""),
-                "date": cert.get("timePeriod", {}).get("startDate", {}),
-                "url": cert.get("url", ""),
-                "license_number": cert.get("licenseNumber", ""),
-            })
+        # 2. Certifications (Voyager normalized included entities)
+        certs_included = raw_data.get("certifications", {}).get("included", [])
+        if certs_included:
+            for item in certs_included:
+                if "Certification" in item.get("$type", ""):
+                    time_period = item.get("timePeriod", {})
+                    start_date = time_period.get("startDate", {}) if isinstance(time_period, dict) else {}
+                    date_str = ""
+                    if start_date.get("year"):
+                        month = start_date.get("month")
+                        date_str = f"{month:02d}/{start_date['year']}" if month else str(start_date["year"])
 
-        # Extract positions
-        positions_raw = raw_data.get("positions", {}).get("elements", [])
-        for pos_group in positions_raw:
-            sub_positions = pos_group.get("positions", [])
-            for pos in sub_positions:
-                normalized["positions"].append({
-                    "title": pos.get("title", ""),
-                    "company": pos.get("companyName", ""),
-                    "location": pos.get("locationName", ""),
-                    "description": pos.get("description", ""),
-                    "time_period": pos.get("timePeriod", {}),
+                    comp_urn = item.get("companyUrn") or item.get("*company")
+                    logo_url = company_map.get(comp_urn, {}).get("logo_url", "") if comp_urn else ""
+
+                    normalized["certifications"].append({
+                        "name": item.get("name", ""),
+                        "issuer": item.get("authority", ""),
+                        "date": date_str,
+                        "url": item.get("url", ""),
+                        "license_number": item.get("licenseNumber", ""),
+                        "display_source": item.get("displaySource", ""),
+                        "logo_url": logo_url,
+                    })
+        elif "elements" in raw_data.get("certifications", {}):
+            for cert in raw_data["certifications"]["elements"]:
+                normalized["certifications"].append({
+                    "name": cert.get("name", ""),
+                    "issuer": cert.get("authority", ""),
+                    "date": cert.get("timePeriod", {}).get("startDate", {}),
+                    "url": cert.get("url", ""),
+                    "license_number": cert.get("licenseNumber", ""),
+                    "logo_url": "",
                 })
+        elif offline.get("certifications"):
+            normalized["certifications"] = offline["certifications"]
 
-        # Extract educations
-        edu_raw = raw_data.get("educations", {}).get("elements", [])
-        for edu in edu_raw:
-            normalized["education"].append({
-                "school": edu.get("schoolName", ""),
-                "degree": edu.get("degreeName", ""),
-                "field_of_study": edu.get("fieldOfStudy", ""),
-                "time_period": edu.get("timePeriod", {}),
-            })
+        # 3. Positions (Voyager normalized included entities)
+        pos_included = raw_data.get("positions", {}).get("included", [])
+        if pos_included:
+            for item in pos_included:
+                if "Position" in item.get("$type", "") and "Group" not in item.get("$type", ""):
+                    time_period = item.get("timePeriod", {})
+                    start_date = time_period.get("startDate", {}) if isinstance(time_period, dict) else {}
+                    end_date = time_period.get("endDate", {}) if isinstance(time_period, dict) else {}
 
-        # Extract skills
-        skills_raw = raw_data.get("skills", {}).get("elements", [])
-        for skill in skills_raw:
-            name = skill.get("name")
-            if name:
-                normalized["skills"].append(name)
+                    start_str = f"{start_date.get('month', 1):02d}/{start_date['year']}" if start_date.get("year") else ""
+                    end_str = f"{end_date.get('month', 1):02d}/{end_date['year']}" if end_date.get("year") else ("Present" if start_str else "")
+
+                    comp_urn = item.get("companyUrn") or (item.get("company", {}) or {}).get("*miniCompany")
+                    logo_url = company_map.get(comp_urn, {}).get("logo_url", "") if comp_urn else ""
+
+                    normalized["positions"].append({
+                        "title": item.get("title", ""),
+                        "company": item.get("companyName", ""),
+                        "location": item.get("locationName", "") or "",
+                        "description": item.get("description", "") or "",
+                        "date_range": f"{start_str} - {end_str}".strip(" -"),
+                        "logo_url": logo_url,
+                    })
+        elif "elements" in raw_data.get("positions", {}):
+            for pos_group in raw_data["positions"]["elements"]:
+                for pos in pos_group.get("positions", []):
+                    normalized["positions"].append({
+                        "title": pos.get("title", ""),
+                        "company": pos.get("companyName", ""),
+                        "location": pos.get("locationName", ""),
+                        "description": pos.get("description", ""),
+                        "date_range": "",
+                        "logo_url": "",
+                    })
+        elif offline.get("positions"):
+            normalized["positions"] = offline["positions"]
+
+        # 4. Volunteering (Voyager normalized included entities)
+        vol_included = raw_data.get("volunteering", {}).get("included", [])
+        if vol_included:
+            for item in vol_included:
+                if "VolunteerExperience" in item.get("$type", ""):
+                    time_period = item.get("timePeriod", {})
+                    start_date = time_period.get("startDate", {}) if isinstance(time_period, dict) else {}
+                    end_date = time_period.get("endDate", {}) if isinstance(time_period, dict) else {}
+
+                    start_str = f"{start_date.get('month', 1):02d}/{start_date['year']}" if start_date.get("year") else ""
+                    end_str = f"{end_date.get('month', 1):02d}/{end_date['year']}" if end_date.get("year") else ("Present" if start_str else "")
+
+                    comp_urn = item.get("companyUrn") or (item.get("company", {}) or {}).get("*miniCompany")
+                    logo_url = company_map.get(comp_urn, {}).get("logo_url", "") if comp_urn else ""
+
+                    normalized["volunteering"].append({
+                        "role": item.get("role", ""),
+                        "company": item.get("companyName", ""),
+                        "cause": item.get("cause", "") or "",
+                        "description": item.get("description", "") or "",
+                        "date_range": f"{start_str} - {end_str}".strip(" -"),
+                        "logo_url": logo_url,
+                    })
+
+        # 5. Projects (Voyager normalized included entities)
+        proj_included = raw_data.get("projects", {}).get("included", [])
+        if proj_included:
+            for item in proj_included:
+                if "Project" in item.get("$type", ""):
+                    time_period = item.get("timePeriod", {})
+                    start_date = time_period.get("startDate", {}) if isinstance(time_period, dict) else {}
+                    end_date = time_period.get("endDate", {}) if isinstance(time_period, dict) else {}
+
+                    start_str = f"{start_date.get('month', 1):02d}/{start_date['year']}" if start_date.get("year") else ""
+                    end_str = f"{end_date.get('month', 1):02d}/{end_date['year']}" if end_date.get("year") else ""
+
+                    normalized["projects"].append({
+                        "title": item.get("title", ""),
+                        "description": item.get("description", "") or "",
+                        "url": item.get("url", "") or "",
+                        "date_range": f"{start_str} - {end_str}".strip(" -"),
+                    })
+        elif offline.get("projects"):
+            normalized["projects"] = offline["projects"]
+
+        # 6. Educations (from live if available, else retain offline)
+        edu_included = raw_data.get("educations", {}).get("included", [])
+        if edu_included:
+            live_edu = []
+            for item in edu_included:
+                if "Education" in item.get("$type", ""):
+                    time_period = item.get("timePeriod", {})
+                    start_date = time_period.get("startDate", {}) if isinstance(time_period, dict) else {}
+                    end_date = time_period.get("endDate", {}) if isinstance(time_period, dict) else {}
+                    start_str = str(start_date.get("year", ""))
+                    end_str = str(end_date.get("year", ""))
+                    live_edu.append({
+                        "school": item.get("schoolName", ""),
+                        "degree": item.get("degreeName", ""),
+                        "field_of_study": item.get("fieldOfStudy", ""),
+                        "time_period": f"{start_str} - {end_str}".strip(" -"),
+                    })
+            if live_edu:
+                normalized["education"] = live_edu
+
+        # 7. Skills (from live if available, else retain offline)
+        skills_included = raw_data.get("skills", {}).get("included", [])
+        if skills_included:
+            live_skills = [x.get("name") for x in skills_included if x.get("name")]
+            if live_skills:
+                normalized["skills"] = live_skills
 
         return normalized
 
 
-def load_env_cookie(env_path: str) -> Optional[str]:
+def load_env_credentials(env_path: str) -> tuple[Optional[str], Optional[str]]:
     if not os.path.exists(env_path):
-        return None
+        return None, None
+    cookie = None
+    jsessionid = None
     with open(env_path, "r", encoding="utf-8") as f:
         for line in f:
             line = line.strip()
             if line.startswith("LINKEDIN_LI_AT="):
-                return line.split("=", 1)[1].strip("\"' ")
-    return None
+                cookie = line.split("=", 1)[1].strip("\"' ")
+            elif line.startswith("LINKEDIN_JSESSIONID="):
+                jsessionid = line.split("=", 1)[1].strip("\"' ")
+    return cookie, jsessionid
 
 
 def main():
     parser = argparse.ArgumentParser(description="Fetch and normalize complete LinkedIn profile data.")
     parser.add_argument("--cookie", "-c", help="LinkedIn li_at session cookie value", default=None)
+    parser.add_argument("--jsessionid", "-j", help="LinkedIn JSESSIONID cookie / CSRF token", default=None)
     parser.add_argument("--username", "-u", help="LinkedIn username/vanity name", default=DEFAULT_USERNAME)
     parser.add_argument("--env", help="Path to .env file containing LINKEDIN_LI_AT", default=".env")
     parser.add_argument("--offline", "-o", help="Parse saved HTML files in linkedin-data/ offline", action="store_true")
@@ -415,47 +575,78 @@ def main():
     args = parser.parse_args()
     os.makedirs(args.output_dir, exist_ok=True)
 
+    offline_file = os.path.join(args.output_dir, "profile_offline.json")
+    offline_data = {}
+    if os.path.exists(offline_file):
+        try:
+            with open(offline_file, "r", encoding="utf-8") as f:
+                offline_data = json.load(f)
+        except Exception:
+            pass
+
     # 1. Offline Mode
     if args.offline:
         print("[MODE] Running in offline HTML parsing mode...")
         offline_parser = Offline_Html_Parser(args.output_dir)
         parsed_data = offline_parser.parse_all_html_files()
-        output_file = os.path.join(args.output_dir, "profile_offline.json")
-        with open(output_file, "w", encoding="utf-8") as f:
+        with open(offline_file, "w", encoding="utf-8") as f:
             json.dump(parsed_data, f, indent=2, ensure_ascii=False)
-        print(f"[SUCCESS] Saved offline extracted data to: {output_file}")
+        print(f"[SUCCESS] Saved offline extracted data to: {offline_file}")
         print(f"Extracted {len(parsed_data.get('certifications', []))} certifications, {len(parsed_data.get('education', []))} education entries, {len(parsed_data.get('projects', []))} projects.")
         return
 
     # 2. Online Mode with li_at cookie
-    cookie = args.cookie or os.getenv("LINKEDIN_LI_AT") or load_env_cookie(args.env)
+    cookie, jsessionid = load_env_credentials(args.env)
+    if args.cookie:
+        cookie = args.cookie
+    if args.jsessionid:
+        jsessionid = args.jsessionid
+    if not cookie:
+        cookie = os.getenv("LINKEDIN_LI_AT")
+    if not jsessionid:
+        jsessionid = os.getenv("LINKEDIN_JSESSIONID")
+
     if not cookie:
         print("[WARN] No LinkedIn 'li_at' cookie provided via --cookie, LINKEDIN_LI_AT env, or .env file.")
         print("[FALLBACK] Falling back to offline parsing of existing files in linkedin-data/...")
         offline_parser = Offline_Html_Parser(args.output_dir)
         parsed_data = offline_parser.parse_all_html_files()
-        output_file = os.path.join(args.output_dir, "profile_offline.json")
-        with open(output_file, "w", encoding="utf-8") as f:
+        with open(offline_file, "w", encoding="utf-8") as f:
             json.dump(parsed_data, f, indent=2, ensure_ascii=False)
-        print(f"[SUCCESS] Saved offline parsed profile to: {output_file}")
-        print("\nTo perform a live API fetch, provide your li_at session cookie:")
+        print(f"[SUCCESS] Saved offline parsed profile to: {offline_file}")
+        print("\nTo perform a live API fetch, provide your li_at session cookie in .env or via command line:")
         print("  python312 scripts/fetch_linkedin.py --cookie \"AQED...\" --username schryzon")
         return
 
     print(f"[MODE] Authenticated Voyager API fetch for user: {args.username}")
-    fetcher = Linkedin_Fetcher(cookie)
+    fetcher = Linkedin_Fetcher(cookie, jsession_id=jsessionid)
     raw_profile = fetcher.fetch_full_profile(args.username)
+    if not raw_profile:
+        print("[ERROR] No profile data could be retrieved. Ensure your 'li_at' session cookie is valid and not expired.")
+        print("[INFO] Re-normalizing existing profile data with offline cache to ensure content is intact...")
+        raw_output_path = os.path.join(args.output_dir, "profile_raw.json")
+        if os.path.exists(raw_output_path):
+            with open(raw_output_path, "r", encoding="utf-8") as f:
+                cached_raw = json.load(f)
+            normalized = Profile_Normalizer.normalize_voyager_data(cached_raw, offline_data=offline_data)
+            norm_output_path = os.path.join(args.output_dir, "profile_normalized.json")
+            with open(norm_output_path, "w", encoding="utf-8") as f:
+                json.dump(normalized, f, indent=2, ensure_ascii=False)
+            print(f"[SUCCESS] Saved normalized profile from cached data to: {norm_output_path}")
+            print(f"Summary: {len(normalized.get('certifications', []))} certifications, {len(normalized.get('positions', []))} positions, {len(normalized.get('projects', []))} projects, {len(normalized.get('education', []))} education entries.")
+        return
 
     raw_output_path = os.path.join(args.output_dir, "profile_raw.json")
     with open(raw_output_path, "w", encoding="utf-8") as f:
         json.dump(raw_profile, f, indent=2, ensure_ascii=False)
     print(f"[SUCCESS] Saved raw profile dump to: {raw_output_path}")
 
-    normalized = Profile_Normalizer.normalize_voyager_data(raw_profile)
+    normalized = Profile_Normalizer.normalize_voyager_data(raw_profile, offline_data=offline_data)
     norm_output_path = os.path.join(args.output_dir, "profile_normalized.json")
     with open(norm_output_path, "w", encoding="utf-8") as f:
         json.dump(normalized, f, indent=2, ensure_ascii=False)
     print(f"[SUCCESS] Saved normalized profile to: {norm_output_path}")
+    print(f"Summary: {len(normalized.get('certifications', []))} certifications, {len(normalized.get('positions', []))} positions, {len(normalized.get('projects', []))} projects, {len(normalized.get('education', []))} education entries.")
 
 
 if __name__ == "__main__":

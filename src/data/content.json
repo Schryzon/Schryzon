@@ -79,10 +79,43 @@
                 {
                     "name": "Bash",
                     "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg"
+                }
+            ]
+        },
+        {
+            "category": "AI & Machine Learning",
+            "skills": [
+                {
+                    "name": "PyTorch",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                },
+                {
+                    "name": "TensorFlow",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                },
+                {
+                    "name": "Keras",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/keras/keras-original.svg"
                 },
                 {
                     "name": "CUDA",
                     "icon_url": "data:image/svg+xml;base64,PHN2ZyByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TlZJRElBPC90aXRsZT48cGF0aCBkPSJNOC45NDggOC43OTh2LTEuNDNhNi43IDYuNyAwIDAgMSAuNDI0LS4wMThjMy45MjItLjEyNCA2LjQ5MyAzLjM3NCA2LjQ5MyAzLjM3NHMtMi43NzQgMy44NTEtNS43NSAzLjg1MWMtLjM5OCAwLS43ODctLjA2Mi0xLjE1OC0uMTg1di00LjM0NmMxLjUyOC4xODUgMS44MzcuODU3IDIuNzQ3IDIuMzg1bDIuMDQtMS43MTRzLTEuNDkyLTEuOTUyLTQtMS45NTJhNi4wMTYgNi4wMTYgMCAwIDAtLjc5Ni4wMzVtMC00LjczNXYyLjEzOGwuNDI0LS4wMjdjNS40NS0uMTg1IDkuMDEgNC40NyA5LjAxIDQuNDdzLTQuMDggNC45NjQtOC4zMyA0Ljk2NGMtLjM3IDAtLjczMy0uMDM1LTEuMDk1LS4wOTd2MS4zMjVjLjMuMDM1LjYxLjA2Mi45MS4wNjIgMy45NTcgMCA2LjgyLTIuMDIzIDkuNTkzLTQuNDA4LjQ1OS4zNzEgMi4zNCAxLjI2MyAyLjczIDEuNjUyLTIuNjMzIDIuMjA4LTguNzcyIDMuOTg0LTEyLjI1MyAzLjk4NC0uMzM1IDAtLjY1My0uMDE4LS45NzEtLjA1M3YxLjg2NEgyNFY0LjA2M3ptMCAxMC4zMjZ2MS4xMzFjLTMuNjU3LS42NTQtNC42NzMtNC40Ni00LjY3My00LjQ2czEuNzU4LTEuOTQ0IDQuNjczLTIuMjYydjEuMjM3SDguOTRjLTEuNTI4LS4xODYtMi43MyAxLjI0NS0yLjczIDEuMjQ1cy42OCAyLjQxMiAyLjczOSAzLjExTTIuNDU2IDEwLjlzMi4xNjQtMy4xOTcgNi41LTMuNTMzVjYuMjAxQzQuMTUzIDYuNTkgMCAxMC42NTMgMCAxMC42NTNzMi4zNSA2LjgwMiA4Ljk0OCA3LjQydi0xLjIzN2MtNC44NC0uNi02LjQ5Mi01LjkzNi02LjQ5Mi01LjkzNnoiLz48L3N2Zz4="
+                },
+                {
+                    "name": "OpenCV",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg"
+                },
+                {
+                    "name": "scikit-learn",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg"
+                },
+                {
+                    "name": "Pandas",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                },
+                {
+                    "name": "NumPy",
+                    "icon_url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg"
                 }
             ]
         },
@@ -181,7 +214,8 @@
                 "Chrome Extension",
                 "AI"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/yomu"
         },
         {
             "repo": "3Dex",
@@ -193,7 +227,8 @@
                 "Docker",
                 "Marketplace"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/3Dex"
         },
         {
             "repo": "XFFS",
@@ -204,7 +239,8 @@
                 "Filesystem",
                 "C++17"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/XFFS"
         },
         {
             "repo": "NetTracer",
@@ -215,7 +251,8 @@
                 "Cisco",
                 "STP"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/NetTracer"
         },
         {
             "repo": "Kanzeon",
@@ -227,7 +264,8 @@
                 "Transformers",
                 "NLP"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/Kanzeon"
         },
         {
             "repo": "Neuro-CPP",
@@ -238,7 +276,8 @@
                 "AI",
                 "Algorithms"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/Neuro-CPP"
         },
         {
             "repo": "RVDiA",
@@ -250,7 +289,8 @@
                 "PostgreSQL",
                 "Docker"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/RVDiA"
         },
         {
             "repo": "RVDiA-WA",
@@ -261,7 +301,8 @@
                 "Quart",
                 "AsyncIO"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/RVDiA-WA"
         },
         {
             "repo": "mpyCUDA",
@@ -272,7 +313,8 @@
                 "MPI",
                 "HPC"
             ],
-            "featured": true
+            "featured": true,
+            "image_url": "https://opengraph.githubassets.com/1/Schryzon/mpyCUDA"
         }
     ],
     "experience": [
@@ -281,70 +323,104 @@
             "role": "Programming Lead Assistant Lecturer",
             "period": "Apr 2026 - Present",
             "description": "Leading assistant lecturing tasks for programming courses, supervising lab sessions, and guiding Informatics students.",
-            "type": "work"
+            "type": "work",
+            "logo_url": "images/orgs/university_of_mataram.png"
         },
         {
             "org": "HMIF FT-UNRAM",
             "role": "Linear Algebra & Programming Mentor",
             "period": "Mar 2026 - May 2026",
             "description": "Mentoring fellow undergraduate students in linear algebra and core programming topics to build robust fundamentals.",
-            "type": "work"
+            "type": "work",
+            "logo_url": "images/orgs/hmif.png"
         },
         {
             "org": "University of Mataram",
             "role": "Digital Systems Assistant Lecturer",
             "period": "Sep 2025 - Dec 2025",
             "description": "Successfully taught and assisted a group of 7 students from the international class in digital systems design.",
-            "type": "work"
+            "type": "work",
+            "logo_url": "images/orgs/university_of_mataram.png"
         },
         {
             "org": "HMIF FT-UNRAM",
             "role": "Web Developer Training Participant",
             "period": "Aug 2025 - Oct 2025",
             "description": "Completed intensive training, achieving the Best Project 3 certificate for high-quality web implementation.",
-            "type": "org"
+            "type": "org",
+            "logo_url": "images/orgs/hmif.png"
         },
         {
             "org": "Google Cloud Arcade Facilitator Program",
             "role": "Indonesian Facilitator 2025",
             "period": "Jul 2025 - Sep 2025",
             "description": "Guided 47 participants overall, successfully mentoring 1 to the Ultimate Milestone, 1 to the Third Milestone, and 4 to the First Milestone.",
-            "type": "work"
+            "type": "work",
+            "logo_url": "images/orgs/google_cloud_arcade_facilitator_program.png"
         },
         {
             "org": "HMIF FT-UNRAM",
             "role": "WINIT: Young Entrepreneur Programmer",
             "period": "May 2025 - Jul 2025",
             "description": "Participated in the WINIT entrepreneurship program, building business-focused web development projects.",
-            "type": "org"
+            "type": "org",
+            "logo_url": "images/orgs/hmif.png"
         },
         {
             "org": "Coding Camp powered by DBS Foundation",
             "role": "Machine Learning Cohort (Progressive)",
             "period": "Feb 2025 - Sep 2025",
             "description": "Completed extensive machine learning training focused on core AI models, neural networks, and applications.",
-            "type": "work"
+            "type": "work",
+            "logo_url": "images/orgs/coding_camp_powered_by_dbs_foundation.png"
         },
         {
             "org": "HMIF FT-UNRAM",
             "role": "Member & LinkedIn Page Manager",
             "period": "Feb 2025 - Present",
             "description": "Serving as an active member of the Informatics Student Association and managing the official LinkedIn page to enhance digital outreach.",
-            "type": "org"
+            "type": "org",
+            "logo_url": "images/orgs/hmif.png"
         },
         {
             "org": "Genesis of Technology (GTECHRESMAN)",
             "role": "Member & Ex-Vice President",
             "period": "Aug 2021 - Apr 2024",
             "description": "Promoted technical initiatives across Bali schools, coordinated organization systems, and designed RVDiA Discord bot serving 30k+ users.",
-            "type": "org"
+            "type": "org",
+            "logo_url": "images/orgs/genesis_of_technology_gtechresman.png"
         },
         {
             "org": "Genesis of Technology (GTECHRESMAN)",
             "role": "Ephotech 2022 & 2023 Olympiad Committee",
             "period": "Jul 2022 - Oct 2023",
             "description": "Created quizzes and provided core technical coordination for high-school Microsoft Excel Olympiads.",
-            "type": "org"
+            "type": "org",
+            "logo_url": "images/orgs/genesis_of_technology_gtechresman.png"
+        },
+        {
+            "org": "Telkom University",
+            "role": "ICoDSA 2026 Master of Ceremony",
+            "period": "Sep 2026",
+            "description": "Master of Ceremony for the International Conference on Data Science and Its Applications (ICoDSA 2026) in collaboration with Telkom University.",
+            "type": "volunteering",
+            "logo_url": "images/orgs/telkom_university.png"
+        },
+        {
+            "org": "University of Mataram",
+            "role": "UNRAM, UM, & USM Inbound Mobility Participant",
+            "period": "Aug 2026",
+            "description": "Selected participant for the tri-university international academic mobility program connecting UNRAM, Universiti Malaya (UM), and Universiti Sains Malaysia (USM).",
+            "type": "volunteering",
+            "logo_url": "images/orgs/university_of_mataram.png"
+        },
+        {
+            "org": "University of Mataram",
+            "role": "Digitalogy General Lecture Master of Ceremony",
+            "period": "Jul 2026",
+            "description": "Served as the Master of Ceremony for the prestigious Digitalogy General Lecture event organized by University of Mataram.",
+            "type": "volunteering",
+            "logo_url": "images/orgs/university_of_mataram.png"
         }
     ],
     "education": [

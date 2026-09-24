@@ -36,12 +36,21 @@ jobs:
                   token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
                   fail_on_error: true
 
-            - name: Generate yomu pin card
+            - name: Generate AC6_recomp pin card
               uses: stats-organization/github-readme-stats-action@v2
               with:
                   card: pin
-                  options: username=Schryzon&repo=yomu&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-                  path: profile/pin-yomu.svg
+                  options: username=sal063&repo=AC6_recomp&show_owner=true&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-ac6-recomp.svg
+                  token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
+                  fail_on_error: true
+
+            - name: Generate cb2util pin card
+              uses: stats-organization/github-readme-stats-action@v2
+              with:
+                  card: pin
+                  options: username=mlafeldt&repo=cb2util&show_owner=true&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-cb2util.svg
                   token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
                   fail_on_error: true
 
@@ -72,21 +81,12 @@ jobs:
                   token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
                   fail_on_error: true
 
-            - name: Generate XFFS pin card
+            - name: Generate pktforge pin card
               uses: stats-organization/github-readme-stats-action@v2
               with:
                   card: pin
-                  options: username=Schryzon&repo=XFFS&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-                  path: profile/pin-xffs.svg
-                  token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
-                  fail_on_error: true
-
-            - name: Generate mpyCUDA pin card
-              uses: stats-organization/github-readme-stats-action@v2
-              with:
-                  card: pin
-                  options: username=Schryzon&repo=mpyCUDA&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
-                  path: profile/pin-mpycuda.svg
+                  options: username=Schryzon&repo=pktforge&theme=tokyonight&bg_color=1E1E2E&hide_border=true&title_color=b27ae4&icon_color=b27ae4&text_color=CDD6F4
+                  path: profile/pin-pktforge.svg
                   token: ${{ secrets.GH_PAT || secrets.PAT || secrets.GITHUB_TOKEN }}
                   fail_on_error: true
 

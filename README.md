@@ -30,6 +30,9 @@
 <a href="https://github.com/Schryzon/Schryzon/actions/workflows/grs.yml">
 <img src="https://img.shields.io/github/actions/workflow/status/Schryzon/Schryzon/grs.yml?branch=master&style=for-the-badge&logo=githubactions&logoColor=white" alt="Update README cards Workflow Status"/>
 </a>
+<a href="./LICENSE">
+<img src="https://img.shields.io/badge/License-MIT-9b59e6?style=for-the-badge" alt="License MIT Badge"/>
+</a>
 </div>
 
 ---
@@ -40,6 +43,8 @@
 <div align="center">
   <img src="https://media1.tenor.com/m/p0kz7NOqxTkAAAAd/kaito-typing.gif" alt="Otaku coder gif" width="400" align="center" />
 </div>
+
+<br/>
 
 Hey there, I'm **I Nyoman Widiyasa Jayananda** (aka **Jay** / **Schryzon**)! I'm a passionate Cloud, DevOps, and Backend enthusiast currently honing my craft at **Universitas Mataram**, Indonesia.
 
@@ -65,6 +70,18 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
     <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=TypeScript&logoColor=white" alt="TypeScript"/>
     <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash"/>
+  </p>
+  <p><strong>🧠 AI & Machine Learning</strong><br/>
+    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch"/>
+    <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow"/>
+    <img src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white" alt="Keras"/>
+    <img src="https://img.shields.io/badge/CUDA-76B900.svg?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA"/>
+    <img src="https://img.shields.io/badge/Google_Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini"/>
+    <img src="https://img.shields.io/badge/OpenCV-5C3EE8.svg?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV"/>
+    <img src="https://img.shields.io/badge/Hugging_Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"/>
+    <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="scikit-learn"/>
+    <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
+    <img src="https://img.shields.io/badge/NumPy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
   </p>
   <p><strong>🗄️ Backend & Databases</strong><br/>
     <img src="https://img.shields.io/badge/PostgreSQL-%23336791.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
@@ -95,31 +112,31 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
 ---
 
 ## 🚀 Showcases & Projects
-<p align="center"><i>Some cool stuff that I've built, whether it's because I'm bored or because I wanted to do more for some assignments, zd</i></p>
+<p align="center"><i>Some cool stuff that I've built or contributed to, whether it's because I'm bored or because I wanted to do more for some assignments, zd</i></p>
 
 <div align="center">
-  <a href="https://github.com/Schryzon/yomu">
-    <img src="./profile/pin-yomu.svg" alt="yōmu! Furigana pronunciation guides & NLP web augmentation layer" />
+  <a href="https://github.com/sal063/AC6_recomp">
+    <img src="./profile/pin-ac6-recomp.svg" alt="sal063/AC6_recomp - static Recomp of AC6 with Rexglue" />
   </a>
   &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/mlafeldt/cb2util">
+    <img src="./profile/pin-cb2util.svg" alt="mlafeldt/cb2util - CodeBreaker PS2 File Utility" />
+  </a>
+  <br/><br/>
   <a href="https://github.com/Schryzon/RVDiA">
     <img src="./profile/pin-rvdia.svg" alt="RVDiA AI Discord Bot" />
   </a>
-  <br/><br/>
+  &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/Schryzon/NetTracer">
     <img src="./profile/pin-nettracer.svg" alt="NetTracer Cisco Simulator" />
   </a>
-  &nbsp;&nbsp;&nbsp;
+  <br/><br/>
   <a href="https://github.com/Schryzon/3Dex">
     <img src="./profile/pin-3dex.svg" alt="3D Assets Marketplace" />
   </a>
-  <br/><br/>
-  <a href="https://github.com/Schryzon/XFFS">
-    <img src="./profile/pin-xffs.svg" alt="XFFS Filesystem" />
-  </a>
   &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/Schryzon/mpyCUDA">
-    <img src="./profile/pin-mpycuda.svg" alt="mpyCUDA MPI, Python, & CUDA" />
+  <a href="https://github.com/Schryzon/pktforge">
+    <img src="./profile/pin-pktforge.svg" alt="pktforge Packet Tracer 7 file decoder" />
   </a>
   <br/><br/>
 </div>
@@ -131,14 +148,6 @@ When I'm not untangling server configs, optimizing SQL queries, or maintaining m
 This repository contains the source code for my premium, dark-purple glassmorphic portfolio site!
 
 * **Live Site**: [schryzon.github.io](https://schryzon.github.io)
-* **Admin Dashboard**: Accessible at [schryzon.github.io/admin](https://schryzon.github.io/admin) (authenticated via passphrase + GitHub PAT for direct content updates).
-
-### 🛠️ Local Setup
-To run the portfolio environment locally:
-```bash
-npm install
-npm run dev
-```
 
 ---
 

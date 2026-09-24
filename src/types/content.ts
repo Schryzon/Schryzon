@@ -36,6 +36,7 @@ export interface FeaturedProject {
     description_override?: string;
     tags: string[];
     featured: boolean;
+    image_url?: string;
 }
 
 export interface Experience {
@@ -43,7 +44,9 @@ export interface Experience {
     role: string;
     period: string;
     description: string;
-    type: "work" | "org";
+    type: "work" | "org" | "volunteering";
+    logo_url?: string;
+    certificate_url?: string;
 }
 
 export interface Education {
